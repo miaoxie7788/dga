@@ -1,6 +1,16 @@
+import pandas as pd
+from params import csv_params
 
-def ingest():
-    pass
+
+def ingest(params):
+    """
+        Ingest data (CSV) into a Pandas dataframe.
+    :param params:      Parameters for data ingestion.
+    :return:            Pandas dataframe.
+    """
+    df = pd.read_csv(**params)
+
+    return df
 
 
 def transform():
@@ -16,7 +26,8 @@ def predict():
 
 
 def main():
-    pass
+    df = ingest(csv_params)
+    print(df)
 
 
 if __name__ == "__main__":
