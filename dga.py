@@ -1,55 +1,22 @@
 from itertools import combinations
 from multiprocessing import Pool
 
+import numpy as np
 import pandas as pd
 from sklearn import preprocessing
 from sklearn.model_selection import cross_val_score
 
-from params import csv_params, algos
+from params import csv_params, algo_dicts
 from udfs import transform_domain_len_udf, transform_domain_num_len_udf, transform_domain_sym_len_udf, \
     transform_domain_vow_len_udf, transform_domain_uniq_count_udf, transform_domain_norm_ent_udf, \
     transform_domain_gini_idx_udf, transform_domain_class_err_udf
-
-
-def cross_val_by_columns(columns_to_test, k_fold=3):
-    for model in models:
-        score = cross_val_score(estimator=models[model], X=X[columns_to_test], y=y, cv=k_fold).mean()
-        # print('columns:', columns_to_test, 'model:', model, 'score:', score)
-        return {'columns': columns_to_test, 'model': model, 'score': score}
-
-
-def cross_val(filename=None):
-    """
-
-    """
-
-    columns = X.columns
-    n = len(columns)
-
-    # Test the subsets of training columns with size ranging from 2 to n.
-    columns_to_tests = [columns[c].to_list() for c in [list(c) for k in range(2, n + 1)
-                                                       for c in combinations(list(range(n)), k)]]
-
-    pool = Pool(processes=12)
-    scores = pool.map(cross_val_by_columns, columns_to_tests)
-    pool.close()
-
-    score_df = pd.DataFrame(scores)
-
-    best = score_df.iloc[score_df['score'].idxmax()]
-    print("Best setting: \n", best)
-
-    if filename:
-        pd.DataFrame(scores).to_csv(filename, header=True, index=False)
-
-    return best
 
 
 def ingest(params):
     """
         Ingest data (CSV) into a Pandas dataframe.
     :param params:      Parameters for data ingestion.
-    :return:            Pandas dataframe.
+    :return:            raw dataframe.
     """
     df = pd.read_csv(**params)
 
@@ -58,8 +25,8 @@ def ingest(params):
 
 def describe(df):
     """
-        Provide descriptive statistics for the given df.
-    :param df:          Pandas dataframe
+        Provide descriptive statistics for the given dataframe.
+    :param df:          raw dataframe
     """
     print("---------------------------- Descriptive statistics ----------------------------")
     print(" Total number of rows: {}".format(len(df)))
@@ -67,14 +34,21 @@ def describe(df):
 
     for column in df.columns:
         if column not in ['class', 'subclass']:
-            print(" Column '{column}' has {n} unique values.".format(column=column, n=df['class'].value_counts().to_dict()))
+            print(" Column '{column}' has {n} unique values.".format(column=column, n=df[column].nunique()))
         else:
             print(" Column '{column}'s distribution: \n".format(column=column), df[column].value_counts().to_dict())
-    print("--------------------------------------------------------------------------------")
+    print("--------------------------------------------------------------------------------\n")
+
 
 def transform(df):
+    """
+        Transform the raw dataframe, extracting features.
+    :param df:          raw dataframe
+    :return:            transform dataframe
+    """
+    # TODO: Due to the time constraint, we primarily extract the features from a string perspective. This may need
+    #  more research in dealing with a practical application.                           MX 06/11/2019
 
-    # Feature extraction.
     df = df.assign(t_x1=df['domain'].apply(transform_domain_len_udf))
     df = df.assign(t_x2=df['domain'].apply(transform_domain_num_len_udf))
     df = df.assign(t_x3=df['domain'].apply(transform_domain_sym_len_udf))
@@ -90,6 +64,60 @@ def transform(df):
     df = df.assign(t_y=le.transform(df['class']))
 
     return df, le
+
+
+def cross_val_algo(columns_to_test, k_fold=3):
+    for classifier in algo_dict:
+        score = cross_val_score(estimator=algo_dict[classifier], X=X[columns_to_test], y=y, cv=k_fold).mean()
+        # print('columns:', columns_to_test, 'model:', model, 'score:', score)
+        return {'columns': columns_to_test, 'classifier': classifier, 'score': score}
+
+
+def cross_val(df, columns_X, column_y, filename=None):
+    """
+        See the best setting (algorithm/classifier and feature set) via brute-forced cross-validation (k=3 by default).
+    :param df:          transform dataframe
+    :param columns_X:   columns of candidate feature set
+    :param column_y:    column of target
+    :param filename:    output CSV that records the details of the cross-validation.
+    :return:            best setting
+    """
+
+
+    # TODO: It is not good practice to use global variables. However, they are made global for running
+    #  multi-processing. This may be fixed later.           MX 06/11/2019
+    global X, y, algo_dict
+    X, y = df[columns_X], df[column_y]
+
+    # Test the subsets of the X columns with size ranging from 2 to n.
+    n = len(columns_X)
+    n = 4
+    columns_X = np.array(columns_X)
+    columns_tests = [columns_X[c] for c in [list(c) for k in range(2, n + 1) for c in combinations(list(range(n)), k)]]
+
+    score_dfs = list()
+    for algo in algo_dicts:
+        algo_dict = algo_dicts[algo]
+
+        pool = Pool(processes=12)
+        scores = pool.map(cross_val_algo, columns_tests)
+        pool.close()
+
+        score_dfs.append(pd.DataFrame(scores).assign(algo=algo))
+
+    score_df = pd.concat(score_dfs, ignore_index=True)
+    best = score_df.iloc[score_df['score'].idxmax()]
+
+    print("--------------------------------- Best setting ---------------------------------")
+    print(" Algorithm: ", best['algo'])
+    print(" Classifier: ", best['classifier'])
+    print(" Feature set: ", best['columns'])
+    print(" Score: ", best['score'])
+    print("--------------------------------------------------------------------------------")
+
+    if filename:
+        score_df.to_csv(filename, header=True, index=False)
+    return best
 
 
 def train():
@@ -108,20 +136,18 @@ def main():
     describe(raw_df)
 
     # Transform raw data.
-    # transform_df, _ = transform(raw_df)
-    #
-    # # These variables are made global for multi-processing.
-    # global X, y, models
-    #
-    # X = transform_df[['t_x1', 't_x2', 't_x3', 't_x4', 't_x5', 't_x6', 't_x7', 't_x8']]
-    # y = transform_df['t_y']
-    #
-    # for algo in algos:
-    #     models = algos[algo]
-    #     cross_val(filename="data/{algo}_scores.csv".format(algo=algo))
+    transform_df, _ = transform(raw_df)
 
-    # print(transform_df)
+    # Select best algorithm and classifier via brute-forced cross-validation.
+    # The algorithms can be "NB", "LR" or "SVM". Each algorithm can construct different classifiers by using
+    # different methods or parameters.
+    # TODO: It is not the best practice to select classifier/feature set using a brute-forced cross-validation.
+    #  Instead, this can be done by measuring class/within-class variance, fisher information and/or PCA. Due to the
+    #  time constraint, this may be fixed later.            MX 06/11/2019
+    columns_X = ['t_x1', 't_x2', 't_x3', 't_x4', 't_x5', 't_x6', 't_x7', 't_x8']
+    column_y = ['t_y']
 
+    best = cross_val(transform_df, columns_X, column_y, filename="data/scores.csv")
 
 
 if __name__ == "__main__":
