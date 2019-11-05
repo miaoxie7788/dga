@@ -2,7 +2,7 @@ import pandas as pd
 from params import csv_params
 from udfs import transform_domain_len_udf, transform_domain_num_len_udf, \
     transform_domain_sym_len_udf, transform_domain_vow_len_udf, transform_domain_uniq_count_udf, \
-    transform_domain_norm_ent_udf, transform_domain_gini_inx_udf, transform_domain_class_err_udf
+    transform_domain_norm_ent_udf, transform_domain_gini_idx_udf, transform_domain_class_err_udf
 
 
 def ingest(params):
@@ -39,7 +39,7 @@ def transform(df):
     df = df.assign(t_f4=df['domain'].apply(transform_domain_vow_len_udf))
     df = df.assign(t_f5=df['domain'].apply(transform_domain_uniq_count_udf))
     df = df.assign(t_f6=df['domain'].apply(transform_domain_norm_ent_udf))
-    df = df.assign(t_f7=df['domain'].apply(transform_domain_gini_inx_udf))
+    df = df.assign(t_f7=df['domain'].apply(transform_domain_gini_idx_udf))
     df = df.assign(t_f8=df['domain'].apply(transform_domain_class_err_udf))
 
     return df
