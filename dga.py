@@ -13,6 +13,22 @@ def ingest(params):
     return df
 
 
+def describe(df):
+    """
+        Provide descriptive statistics for the given df.
+    :param df:          Panda dataframe
+    """
+
+    print("Total number of rows:{}".format(len(df)))
+    print("Total number of columns:{}".format(len(df.columns)))
+
+    print("\n")
+
+    for column in df.columns:
+        print("{column} has {n} unique values.".format(column=column, n=df[column].nunique()))
+
+
+
 def transform():
     pass
 
@@ -27,7 +43,7 @@ def predict():
 
 def main():
     df = ingest(csv_params)
-    print(df)
+    describe(df)
 
 
 if __name__ == "__main__":
