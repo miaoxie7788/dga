@@ -69,10 +69,10 @@ def transform(df):
 
 
 def cross_val_algo(columns_to_test, k_fold=3):
-    for classifier in algo_dict:
-        score = cross_val_score(estimator=algo_dict[classifier], X=X[columns_to_test], y=y, cv=k_fold).mean()
-        # print('columns:', columns_to_test, 'model:', model, 'score:', score)
-        return {'columns': columns_to_test, 'classifier': classifier, 'score': score}
+    for clf in algo_dict:
+        score = cross_val_score(estimator=algo_dict[clf], X=X[columns_to_test], y=y, cv=k_fold).mean()
+        # print('columns': columns_to_test, 'clf': clf, 'score': score)
+        return {'columns': columns_to_test, 'clf': clf, 'score': score}
 
 
 def cross_val(df, columns_X, column_y, filename=None):
@@ -110,7 +110,7 @@ def cross_val(df, columns_X, column_y, filename=None):
 
     print("--------------------------------- Best setting ---------------------------------")
     print(" Algorithm: ", best['algo'])
-    print(" Classifier: ", best['classifier'])
+    print(" Classifier: ", best['clf'])
     print(" Feature set: ", best['columns'])
     print(" Score: ", best['score'])
     print("--------------------------------------------------------------------------------")
@@ -120,16 +120,16 @@ def cross_val(df, columns_X, column_y, filename=None):
     return best
 
 
-def train(df, columns_X, column_y, classifer, filename=None):
+def train(df, columns_X, column_y, clf, filename=None):
 
     X, y = df[columns_X], df[column_y]
-    classifer.fit(X, y)
+    clf.fit(X, y)
 
     if filename:
         with open(filename, 'wb') as f:
-            dump(classifer, f)
+            dump(clf, f)
 
-    return classifer
+    return clf
 
 
 def predict():
@@ -158,14 +158,14 @@ def main():
     # best = cross_val(transform_df, columns_X, column_y, filename="data/scores.csv")
 
     best = {'algo': 'lr',
-            'classifier': 'newton-cg',
+            'clf': 'newton-cg',
             'columns': ['t_x1', 't_x2', 't_x3', 't_x4', 't_x5', 't_x6', 't_x7'],
             'score': 0.9122425817242358}
 
     columns_X = best['columns']
-    classifier = algo_dicts[best['algo']][best['classifier']]
+    clf = algo_dicts[best['algo']][best['clf']]
 
-    train(transform_df, columns_X, column_y, classifier, filename="data/clf.pickle")
+    train(transform_df, columns_X, column_y, clf, filename="data/clf.pickle")
 
 if __name__ == "__main__":
     main()
