@@ -59,17 +59,18 @@ def ingest(params):
 def describe(df):
     """
         Provide descriptive statistics for the given df.
-    :param df:          Panda dataframe
+    :param df:          Pandas dataframe
     """
-
-    print("Total number of rows:{}".format(len(df)))
-    print("Total number of columns:{}".format(len(df.columns)))
-
-    print("\n")
+    print("---------------------------- Descriptive statistics ----------------------------")
+    print(" Total number of rows: {}".format(len(df)))
+    print(" Total number of columns: {}".format(len(df.columns)))
 
     for column in df.columns:
-        print("{column} has {n} unique values.".format(column=column, n=df[column].nunique()))
-
+        if column not in ['class', 'subclass']:
+            print(" Column '{column}' has {n} unique values.".format(column=column, n=df['class'].value_counts().to_dict()))
+        else:
+            print(" Column '{column}'s distribution: \n".format(column=column), df[column].value_counts().to_dict())
+    print("--------------------------------------------------------------------------------")
 
 def transform(df):
 
@@ -107,17 +108,17 @@ def main():
     describe(raw_df)
 
     # Transform raw data.
-    transform_df, _ = transform(raw_df)
-
-    # These variables are made global for multi-processing.
-    global X, y, models
-
-    X = transform_df[['t_x1', 't_x2', 't_x3', 't_x4', 't_x5', 't_x6', 't_x7', 't_x8']]
-    y = transform_df['t_y']
-
-    for algo in algos:
-        models = algos[algo]
-        cross_val(filename="data/{algo}_scores.csv".format(algo=algo))
+    # transform_df, _ = transform(raw_df)
+    #
+    # # These variables are made global for multi-processing.
+    # global X, y, models
+    #
+    # X = transform_df[['t_x1', 't_x2', 't_x3', 't_x4', 't_x5', 't_x6', 't_x7', 't_x8']]
+    # y = transform_df['t_y']
+    #
+    # for algo in algos:
+    #     models = algos[algo]
+    #     cross_val(filename="data/{algo}_scores.csv".format(algo=algo))
 
     # print(transform_df)
 
