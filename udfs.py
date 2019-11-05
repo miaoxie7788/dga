@@ -52,7 +52,7 @@ def transform_domain_vow_len_udf(s):
     :param s:   domain,     e.g.,   000directory
     :return:    length,     e.g.,   4
     """
-    vowels=['a', 'e', 'i', 'o', 'u', 'y']
+    vowels = ['a', 'e', 'i', 'o', 'u', 'y']
     if s:
         n = sum(c.lower() in vowels for c in s)
     else:
@@ -108,7 +108,7 @@ def transform_domain_gini_idx_udf(s):
         dist = {c: freq[c] / n for c in freq}
 
         # Gini index
-        gni = 1 - sum(dist[c] **2 for c in dist)
+        gni = 1 - sum(dist[c] ** 2 for c in dist)
     else:
         gni = 1
 
