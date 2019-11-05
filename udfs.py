@@ -75,7 +75,7 @@ def transform_domain_uniq_count_udf(s):
     return n
 
 
-def transform_domain_norm_entropy_udf(s):
+def transform_domain_norm_ent_udf(s):
     """
     Compute the normalised entropy for a domain.
         reference: Inline DGA Detection with Deep Networks
@@ -95,7 +95,7 @@ def transform_domain_norm_entropy_udf(s):
     return ent
 
 
-def transform_domain_gini_index_udf(s):
+def transform_domain_gini_inx_udf(s):
     """
     Compute the Gini index for a domain.
         reference: Inline DGA Detection with Deep Networks
@@ -115,7 +115,7 @@ def transform_domain_gini_index_udf(s):
     return gni
 
 
-def transform_domain_classification_error_udf(s):
+def transform_domain_class_err_udf(s):
     """
     Compute the classification error for a domain.
         reference: Inline DGA Detection with Deep Networks
