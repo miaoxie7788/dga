@@ -95,7 +95,7 @@ def transform_domain_norm_ent_udf(s):
     return ent
 
 
-def transform_domain_gini_inx_udf(s):
+def transform_domain_gini_idx_udf(s):
     """
     Compute the Gini index for a domain.
         reference: Inline DGA Detection with Deep Networks
