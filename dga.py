@@ -1,5 +1,6 @@
 from itertools import combinations
 from multiprocessing import Pool
+from pickle import dump, load
 
 import numpy as np
 import pandas as pd
@@ -10,8 +11,6 @@ from params import csv_params, algo_dicts
 from udfs import transform_domain_len_udf, transform_domain_num_len_udf, transform_domain_sym_len_udf, \
     transform_domain_vow_len_udf, transform_domain_uniq_count_udf, transform_domain_norm_ent_udf, \
     transform_domain_gini_idx_udf, transform_domain_class_err_udf
-
-from pickle import dump, load
 
 
 def ingest(params):
@@ -95,8 +94,8 @@ def cross_val(transform_df, train_columns, target_column):
     # Generate the subsets of the training columns with size ranging from 2 to n.
     n = len(train_columns)
     train_columns = np.array(train_columns)
-    train_columns_sets = [train_columns[c] for c in [list(c) for k in range(2, n + 1)
-                                                     for c in combinations(list(range(n)), k)]]
+    train_columns_sets = [train_columns[c] for c in
+                          [list(c) for k in range(2, n + 1) for c in combinations(list(range(n)), k)]]
 
     setting_dfs = list()
     for algo in algo_dicts:
@@ -151,11 +150,9 @@ def pipeline_cross_val():
     target_column = ['t_y']
 
     cross_val(transform_df, train_columns, target_column)
-    main()
 
 
-def pipeline_train():
-
+def pipeline_supervised_train():
     # Ingest raw data.
     raw_df = ingest(csv_params)
 
@@ -181,10 +178,10 @@ def pipeline_train():
     train_columns = best['columns']
     target_column = ['t_y']
 
-    train_df, targets = transform_df[train_columns], transform_df[target_column]
+    X, y = transform_df[train_columns], transform_df[target_column]
     clf = algo_dicts[best['algo']][best['clf']]
 
-    clf.fit(train_df, targets)
+    clf.fit(X, y)
 
     # Dumps the trained classifier and label encoder both.
     with open("data/clf.pickle", 'wb') as f:
@@ -192,11 +189,8 @@ def pipeline_train():
 
     print("The trained classifier is dumped into data/clf.pickle.")
 
-    main()
 
-
-def pipeline_predict():
-
+def pipeline_supervised_predict():
     with open("data/clf.pickle", 'rb') as f:
         clf, le = load(f)
 
@@ -216,7 +210,6 @@ def pipeline_predict():
 
 
 def main():
-
     action_code = input(""" 
     --------------------------------- DGA detector ---------------------------------
     Choose an action to take 
@@ -229,10 +222,12 @@ def main():
 
     if action_code == 'a':
         pipeline_cross_val()
+        main()
     elif action_code == 't':
-        pipeline_train()
+        pipeline_supervised_train()
+        main()
     elif action_code == 'p':
-        pipeline_predict()
+        pipeline_supervised_predict()
     elif action_code == 'e':
         print("bye.")
     else:
@@ -241,5 +236,4 @@ def main():
 
 
 if __name__ == "__main__":
-    
     main()
