@@ -12,6 +12,8 @@ from udfs import transform_domain_len_udf, transform_domain_num_len_udf, transfo
     transform_domain_vow_len_udf, transform_domain_uniq_count_udf, transform_domain_norm_ent_udf, \
     transform_domain_gini_idx_udf, transform_domain_class_err_udf
 
+from markov import markov_fit, markov_apply
+
 
 def ingest(params):
     """
@@ -209,29 +211,103 @@ def pipeline_supervised_predict():
             print(le.inverse_transform(y)[0])
 
 
+def pipeline_unsupervised_train():
+    # Ingest raw data.
+    raw_df = ingest(csv_params)
+
+    # Print descriptive statistics.
+    describe(raw_df)
+
+    # In case we don't have labels, we have to assume all domains are `legit'.
+    # However we are interested to test how the unsupervised detector works with 'dga' domains.
+    legit_domains = raw_df[raw_df['class'] == 'legit']['domain'].values
+    dga_domains = raw_df[raw_df['class'] == 'dga']['domain'].values
+
+    # Turn each domain (string) into a list of chars (iterables).
+    legit_seqs = list(map(list, legit_domains))
+    dga_seqs = list(map(list, dga_domains))
+
+    # Train a markov model.
+    markov_model = markov_fit(legit_seqs)
+
+    # Compute the sequence log probability with averaged 3-grams.
+    legit_seq_prs = [markov_apply(seq, markov_model, is_log=True) for seq in legit_seqs]
+    dga_seq_prs = [markov_apply(seq, markov_model, is_log=True) for seq in dga_seqs]
+
+    # Test a range of percentiles 0.5 - 5.
+
+    th90 = 0
+    for k in range(1, 10):
+        th = np.percentile(legit_seq_prs, k/2)
+        acc = sum(dga_seq_prs < th) / len(dga_seq_prs)
+
+        # Select the first one that achieves a detection accuracy of higher than 90% as the threshold.
+        if acc > 0.9 and th90 == 0:
+            th90 = th
+
+        # If last percentile is still not able to yield an accuracy of higher than 90%, use the last one as the
+        # threshold anyway.
+        if k == 10 and th90 == 0:
+            th90 = th
+        print("Test the threshold {th}: theoretical ACC={acc}, FPR={fpr}".format(th=th, acc=acc, fpr=k/2))
+
+    print("The selected threshold is {th}".format(th=th90))
+
+    # Dump the trained Markov model.
+    with open("data/markov.pickle", 'wb') as f:
+        dump([markov_model, th90], f)
+
+    print("The trained Markov model is dumped into data/markov.pickle.")
+
+
+def pipeline_unsupervised_predict():
+    with open("data/markov.pickle", 'rb') as f:
+        markov_model, th = load(f)
+
+    while True:
+        domain = input("Give a domain to be predicted? \n")
+
+        # TODO: The feature extraction below can be automated with loading best.pickle later. MX 06/11/2019
+
+        if domain:
+            seq_pr = markov_apply(list(domain), markov_model, is_log=True)
+
+            if seq_pr < th:
+                print("dga")
+            else:
+                print("legit")
+
+
 def main():
     action_code = input(""" 
     --------------------------------- DGA detector ---------------------------------
     Choose an action to take 
     'a': automatically select classifier and feature set by cross-validation.
-    't': train a classifier. 
-    'p': predict a domain with an existing classifier.  
+    'c': train a classifier. 
+    's': predict a domain with the classifier. 
+    'm': train a Markov model.
+    'u': predict a domain with the Markov model. 
     'e': exit. 
     --------------------------------------------------------------------------------    
         """)
 
-    if action_code == 'a':
+    if action_code == 'e':
+        print("bye.")
+    elif action_code == 'a':
         pipeline_cross_val()
         main()
-    elif action_code == 't':
+    elif action_code == 'c':
         pipeline_supervised_train()
         main()
-    elif action_code == 'p':
+    elif action_code == 's':
         pipeline_supervised_predict()
-    elif action_code == 'e':
-        print("bye.")
+    elif action_code == 'm':
+        pipeline_unsupervised_train()
+        main()
+    elif action_code == 'u':
+        pipeline_unsupervised_predict()
     else:
-        print("Choose 'a', 't', 'p', or 'e'.")
+        print("Choose 'a', 'c', 's', 'm', 'u', or 'e'.")
         main()
 
 
