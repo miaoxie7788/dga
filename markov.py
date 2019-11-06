@@ -45,6 +45,9 @@ def markov_apply(seq, markov_model, n=3, method='avg', is_log=False):
     :param is_log:          the logarithm of a probability
     :return:                sequence probability
     """
+    if not seq:
+        return 0
+
     seq = np.asarray(seq, dtype=str)
 
     # n-grams
