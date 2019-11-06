@@ -31,15 +31,15 @@ def markov_fit(seqs):
     # Transition probability should be zero in this case.
     trans_prob_matrix = np.nan_to_num(trans_prob_matrix)
 
-    model_markov = {"s": state_space, "p0": start_prob_vector, "p1": trans_prob_matrix}
-    return model_markov
+    markov_model = {"s": state_space, "p0": start_prob_vector, "p1": trans_prob_matrix}
+    return markov_model
 
 
-def markov_apply(seq, model_markov, n=3, method='avg', is_log=False):
+def markov_apply(seq, markov_model, n=3, method='avg', is_log=False):
     """
         Compute a sequence's probability based on the given 1st order markov chain.
     :param seq:             iterable
-    :param model_markov:    fitted Markov model
+    :param markov_model:    fitted Markov model
     :param n:               n-gram
     :param method:          'avg', 'sum', 'max', 'min', 'med'
     :param is_log:          the logarithm of a probability
@@ -54,7 +54,7 @@ def markov_apply(seq, model_markov, n=3, method='avg', is_log=False):
         seqs = [seq[k: k + n] for k in range(len(seq) - n + 1)]
 
     # Initialise the 1st Markov chain.
-    state_space, start_prob_vector, trans_prob_matrix = model_markov['s'], model_markov['p0'], model_markov['p1']
+    state_space, start_prob_vector, trans_prob_matrix = markov_model['s'], markov_model['p0'], markov_model['p1']
 
     # Replace log(0) with constant log(1e-100).
     log0 = -230.26
