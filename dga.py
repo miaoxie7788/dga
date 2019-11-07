@@ -85,14 +85,14 @@ def cross_val_algo(train_columns, k_fold=3):
 
 
 def cross_val(transform_df, train_columns, target_column, settings_filename="data/settings.csv",
-              best_filenmae="data/best.pickle"):
+              best_filename="data/best.pickle"):
     """
         Seek the best setting (algorithm/classifier and feature set) via brute-forced cross-validation (k=3 by default).
     :param transform_df:                transform dataframe
     :param train_columns:               training columns
     :param target_column:               target column
-    :param settings_filename            filename of csv that keeps settings generated from cross validation
-    :param best_filename                filename of pickle that keeps the best setting
+    :param settings_filename:           filename of csv that keeps settings generated from cross validation
+    :param best_filename:               filename of pickle that keeps the best setting
     :return:                            best setting (dict)
     """
 
@@ -134,9 +134,9 @@ def cross_val(transform_df, train_columns, target_column, settings_filename="dat
           """.format(algo=best['algo'], clf=best['clf'], columns=best['columns'], score=best['score']))
     print("--------------------------------------------------------------------------------")
 
-    with open(best_filenmae, 'wb') as f:
+    with open(best_filename, 'wb') as f:
         dump(best, f)
-    print("The best setting is dumped into {name}.".format(name=best_filenmae))
+    print("The best setting is dumped into {name}.".format(name=best_filename))
 
     return best
 
