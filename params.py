@@ -7,7 +7,7 @@ from sklearn.naive_bayes import GaussianNB, MultinomialNB, ComplementNB, Bernoul
 from sklearn.svm import SVC
 
 # Parameters for data ingestion.
-csv_params = {'filepath_or_buffer': "data/dga_domains.csv",
+csv_params = {
               'header': 0,
               'index_col': False,
               'dtype': {"host": str, ' '"domain": str, ' '"class": str, "subclass": str},
