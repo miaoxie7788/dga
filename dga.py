@@ -164,10 +164,14 @@ def pipeline_cross_val(csv_filename="data/dga_domains.csv", settings_filename="d
     return best
 
 
-def supervised_predict(domain, clf, le):
-    x = [transform_domain_len_udf(domain), transform_domain_num_len_udf(domain), transform_domain_sym_len_udf(domain),
-         transform_domain_vow_len_udf(domain), transform_domain_uniq_count_udf(domain),
-         transform_domain_norm_ent_udf(domain), transform_domain_gini_idx_udf(domain), ]
+def supervised_predict(x, clf, le):
+    """
+        Predict a feature vector using the given classifier and fitted label encoder.
+    :param x:           feature vector extracted from a given domain
+    :param clf:         classifier
+    :param le:          label encoder
+    :return:            label (inverse transformed by label encoder)
+    """
 
     y = clf.predict([x])
     label = le.inverse_transform(y)[0]
@@ -216,16 +220,30 @@ def pipeline_supervised_train(csv_filename="data/dga_domains.csv", best_filename
     return None
 
 
-def pipeline_supervised_predict(clf_filename="data/clf.pickle"):
+def pipeline_supervised_predict(best_filename="data/best.pickle", clf_filename="data/clf.pickle"):
+
+    transform_functions = {'t_x1': transform_domain_len_udf,
+                           't_x2': transform_domain_num_len_udf,
+                           't_x3': transform_domain_sym_len_udf,
+                           't_x4': transform_domain_vow_len_udf,
+                           't_x5': transform_domain_uniq_count_udf,
+                           't_x6': transform_domain_norm_ent_udf,
+                           't_x7': transform_domain_gini_idx_udf,
+                           't_x8': transform_domain_class_err_udf,}
+
+    with open(best_filename, 'rb') as f:
+        best = load(f)
+
     with open(clf_filename, 'rb') as f:
-        clf, le = load(f)
+        clf, target_le = load(f)
 
     while True:
         domain = input("Give a domain to be predicted? \n")
-
-        # TODO: The feature extraction below can be automated with loading best.pickle later. MX 06/11/2019
-
-        label = supervised_predict(domain, clf, le)
+        if domain:
+            x = [transform_functions[column](domain) for column in best['columns']]
+            label = supervised_predict(x, clf, target_le)
+        else:
+            label = 'Try again.'
         print(label)
 
 
