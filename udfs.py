@@ -87,8 +87,11 @@ def transform_domain_norm_ent_udf(s):
         freq = {c: s.count(c) for c in set(s)}
         dist = {c: freq[c] / n for c in freq}
 
-        # normalised entropy
-        ent = -1 * sum(dist[c] * log2(dist[c]) for c in dist) / log2(n)
+        if n == 1:
+            ent = 0
+        else:
+            # normalised entropy
+            ent = -1 * sum(dist[c] * log2(dist[c]) for c in dist) / log2(n)
     else:
         ent = 0
 
