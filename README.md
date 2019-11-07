@@ -59,3 +59,10 @@ Why have you chosen that particular model?
 What steps have you taken to explore the data?
 What metric(s) are you using to measure the performance and why?
 How have you validated the model's performance?
+
+
+
+
+
+
+
