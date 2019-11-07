@@ -1,0 +1,742 @@
+clf,columns,score,algo
+Gaussian,['t_x1' 't_x2'],0.7122963427564476,nb
+Gaussian,['t_x1' 't_x3'],0.44109433567791173,nb
+Gaussian,['t_x1' 't_x4'],0.722100264325075,nb
+Gaussian,['t_x1' 't_x5'],0.7621671669429385,nb
+Gaussian,['t_x1' 't_x6'],0.7300150829562594,nb
+Gaussian,['t_x1' 't_x7'],0.7807893911563103,nb
+Gaussian,['t_x1' 't_x8'],0.7609127428579963,nb
+Gaussian,['t_x2' 't_x3'],0.44109433567791173,nb
+Gaussian,['t_x2' 't_x4'],0.6673237459492555,nb
+Gaussian,['t_x2' 't_x5'],0.7245717784448128,nb
+Gaussian,['t_x2' 't_x6'],0.6689888445858161,nb
+Gaussian,['t_x2' 't_x7'],0.6702059346206113,nb
+Gaussian,['t_x2' 't_x8'],0.6687125726147275,nb
+Gaussian,['t_x3' 't_x4'],0.44109433567791173,nb
+Gaussian,['t_x3' 't_x5'],0.44109433567791173,nb
+Gaussian,['t_x3' 't_x6'],0.4441333273598853,nb
+Gaussian,['t_x3' 't_x7'],0.5353852127294177,nb
+Gaussian,['t_x3' 't_x8'],0.47150665292773625,nb
+Gaussian,['t_x4' 't_x5'],0.7978137180233861,nb
+Gaussian,['t_x4' 't_x6'],0.655451518002479,nb
+Gaussian,['t_x4' 't_x7'],0.8025103415318907,nb
+Gaussian,['t_x4' 't_x8'],0.7451353732658333,nb
+Gaussian,['t_x5' 't_x6'],0.7949912638322657,nb
+Gaussian,['t_x5' 't_x7'],0.8006660394546241,nb
+Gaussian,['t_x5' 't_x8'],0.7953795379537953,nb
+Gaussian,['t_x6' 't_x7'],0.810634230843899,nb
+Gaussian,['t_x6' 't_x8'],0.7538939414303422,nb
+Gaussian,['t_x7' 't_x8'],0.7597927213535834,nb
+Gaussian,['t_x1' 't_x2' 't_x3'],0.5538581007422009,nb
+Gaussian,['t_x1' 't_x2' 't_x4'],0.7098248286367098,nb
+Gaussian,['t_x1' 't_x2' 't_x5'],0.7159177456207159,nb
+Gaussian,['t_x1' 't_x2' 't_x6'],0.712497946627242,nb
+Gaussian,['t_x1' 't_x2' 't_x7'],0.7031644340904678,nb
+Gaussian,['t_x1' 't_x2' 't_x8'],0.7066439675641772,nb
+Gaussian,['t_x1' 't_x3' 't_x4'],0.44109433567791173,nb
+Gaussian,['t_x1' 't_x3' 't_x5'],0.46430864805937605,nb
+Gaussian,['t_x1' 't_x3' 't_x6'],0.4472992548123591,nb
+Gaussian,['t_x1' 't_x3' 't_x7'],0.5784089721189313,nb
+Gaussian,['t_x1' 't_x3' 't_x8'],0.524864477397966,nb
+Gaussian,['t_x1' 't_x4' 't_x5'],0.7659976404880308,nb
+Gaussian,['t_x1' 't_x4' 't_x6'],0.7363618714812658,nb
+Gaussian,['t_x1' 't_x4' 't_x7'],0.79879187013724,nb
+Gaussian,['t_x1' 't_x4' 't_x8'],0.7774965279333363,nb
+Gaussian,['t_x1' 't_x5' 't_x6'],0.7633842569777339,nb
+Gaussian,['t_x1' 't_x5' 't_x7'],0.7965518271284141,nb
+Gaussian,['t_x1' 't_x5' 't_x8'],0.7773770589728656,nb
+Gaussian,['t_x1' 't_x6' 't_x7'],0.7896076938010542,nb
+Gaussian,['t_x1' 't_x6' 't_x8'],0.7743978017711273,nb
+Gaussian,['t_x1' 't_x7' 't_x8'],0.8007033735047714,nb
+Gaussian,['t_x2' 't_x3' 't_x4'],0.44109433567791173,nb
+Gaussian,['t_x2' 't_x3' 't_x5'],0.5512447172319042,nb
+Gaussian,['t_x2' 't_x3' 't_x6'],0.47230560160088414,nb
+Gaussian,['t_x2' 't_x3' 't_x7'],0.5988680315995399,nb
+Gaussian,['t_x2' 't_x3' 't_x8'],0.5432178964502785,nb
+Gaussian,['t_x2' 't_x4' 't_x5'],0.7251467228170781,nb
+Gaussian,['t_x2' 't_x4' 't_x6'],0.6685035019339037,nb
+Gaussian,['t_x2' 't_x4' 't_x7'],0.6741558771261742,nb
+Gaussian,['t_x2' 't_x4' 't_x8'],0.6691307139763749,nb
+Gaussian,['t_x2' 't_x5' 't_x6'],0.7192554097038663,nb
+Gaussian,['t_x2' 't_x5' 't_x7'],0.7590460403506413,nb
+Gaussian,['t_x2' 't_x5' 't_x8'],0.7356973253886475,nb
+Gaussian,['t_x2' 't_x6' 't_x7'],0.6708182130430238,nb
+Gaussian,['t_x2' 't_x6' 't_x8'],0.6692800501769635,nb
+Gaussian,['t_x2' 't_x7' 't_x8'],0.726035273210579,nb
+Gaussian,['t_x3' 't_x4' 't_x5'],0.44109433567791173,nb
+Gaussian,['t_x3' 't_x4' 't_x6'],0.4446784044920329,nb
+Gaussian,['t_x3' 't_x4' 't_x7'],0.5417992025446888,nb
+Gaussian,['t_x3' 't_x4' 't_x8'],0.4731269507041202,nb
+Gaussian,['t_x3' 't_x5' 't_x6'],0.4493003599002434,nb
+Gaussian,['t_x3' 't_x5' 't_x7'],0.5870854053731164,nb
+Gaussian,['t_x3' 't_x5' 't_x8'],0.5231396442811702,nb
+Gaussian,['t_x3' 't_x6' 't_x7'],0.538633275092215,nb
+Gaussian,['t_x3' 't_x6' 't_x8'],0.47443364245926856,nb
+Gaussian,['t_x3' 't_x7' 't_x8'],0.5689858578618042,nb
+Gaussian,['t_x4' 't_x5' 't_x6'],0.8035930289861565,nb
+Gaussian,['t_x4' 't_x5' 't_x7'],0.8114331795170467,nb
+Gaussian,['t_x4' 't_x5' 't_x8'],0.8115227812373997,nb
+Gaussian,['t_x4' 't_x6' 't_x7'],0.8343264190672461,nb
+Gaussian,['t_x4' 't_x6' 't_x8'],0.7711796066484476,nb
+Gaussian,['t_x4' 't_x7' 't_x8'],0.7734793841375088,nb
+Gaussian,['t_x5' 't_x6' 't_x7'],0.8131430790137838,nb
+Gaussian,['t_x5' 't_x6' 't_x8'],0.8153532547824919,nb
+Gaussian,['t_x5' 't_x7' 't_x8'],0.7942520496393531,nb
+Gaussian,['t_x6' 't_x7' 't_x8'],0.7883682033361707,nb
+Gaussian,['t_x1' 't_x2' 't_x3' 't_x4'],0.5640054955721817,nb
+Gaussian,['t_x1' 't_x2' 't_x3' 't_x5'],0.6855427624210385,nb
+Gaussian,['t_x1' 't_x2' 't_x3' 't_x6'],0.5448979287068979,nb
+Gaussian,['t_x1' 't_x2' 't_x3' 't_x7'],0.6965488404044023,nb
+Gaussian,['t_x1' 't_x2' 't_x3' 't_x8'],0.6248599973119484,nb
+Gaussian,['t_x1' 't_x2' 't_x4' 't_x5'],0.7133342293505369,nb
+Gaussian,['t_x1' 't_x2' 't_x4' 't_x6'],0.7101907023281514,nb
+Gaussian,['t_x1' 't_x2' 't_x4' 't_x7'],0.7041201857742335,nb
+Gaussian,['t_x1' 't_x2' 't_x4' 't_x8'],0.7052178068485581,nb
+Gaussian,['t_x1' 't_x2' 't_x5' 't_x6'],0.7136553021818018,nb
+Gaussian,['t_x1' 't_x2' 't_x5' 't_x7'],0.732927138867733,nb
+Gaussian,['t_x1' 't_x2' 't_x5' 't_x8'],0.7236309603811059,nb
+Gaussian,['t_x1' 't_x2' 't_x6' 't_x7'],0.7025372220479967,nb
+Gaussian,['t_x1' 't_x2' 't_x6' 't_x8'],0.7066066335140301,nb
+Gaussian,['t_x1' 't_x2' 't_x7' 't_x8'],0.7186729985215715,nb
+Gaussian,['t_x1' 't_x3' 't_x4' 't_x5'],0.4923315860997864,nb
+Gaussian,['t_x1' 't_x3' 't_x4' 't_x6'],0.44835207502650715,nb
+Gaussian,['t_x1' 't_x3' 't_x4' 't_x7'],0.5911398832190912,nb
+Gaussian,['t_x1' 't_x3' 't_x4' 't_x8'],0.523811657183818,nb
+Gaussian,['t_x1' 't_x3' 't_x5' 't_x6'],0.5084598957633321,nb
+Gaussian,['t_x1' 't_x3' 't_x5' 't_x7'],0.6798381195585622,nb
+Gaussian,['t_x1' 't_x3' 't_x5' 't_x8'],0.5951122261547422,nb
+Gaussian,['t_x1' 't_x3' 't_x6' 't_x7'],0.5866075295312337,nb
+Gaussian,['t_x1' 't_x3' 't_x6' 't_x8'],0.5238041903737886,nb
+Gaussian,['t_x1' 't_x3' 't_x7' 't_x8'],0.6328644176634858,nb
+Gaussian,['t_x1' 't_x4' 't_x5' 't_x6'],0.7745546047817452,nb
+Gaussian,['t_x1' 't_x4' 't_x5' 't_x7'],0.8013305855472425,nb
+Gaussian,['t_x1' 't_x4' 't_x5' 't_x8'],0.7877633917237877,nb
+Gaussian,['t_x1' 't_x4' 't_x6' 't_x7'],0.8066320206681302,nb
+Gaussian,['t_x1' 't_x4' 't_x6' 't_x8'],0.7863073637680511,nb
+Gaussian,['t_x1' 't_x4' 't_x7' 't_x8'],0.8124411988710184,nb
+Gaussian,['t_x1' 't_x5' 't_x6' 't_x7'],0.795215268133148,nb
+Gaussian,['t_x1' 't_x5' 't_x6' 't_x8'],0.7929378910741752,nb
+Gaussian,['t_x1' 't_x5' 't_x7' 't_x8'],0.7991353433985933,nb
+Gaussian,['t_x1' 't_x6' 't_x7' 't_x8'],0.8080432477636904,nb
+Gaussian,['t_x2' 't_x3' 't_x4' 't_x5'],0.5928572495258576,nb
+Gaussian,['t_x2' 't_x3' 't_x4' 't_x6'],0.46769857981273244,nb
+Gaussian,['t_x2' 't_x3' 't_x4' 't_x7'],0.5998536505234234,nb
+Gaussian,['t_x2' 't_x3' 't_x4' 't_x8'],0.5435763033316906,nb
+Gaussian,['t_x2' 't_x3' 't_x5' 't_x6'],0.5727715305467199,nb
+Gaussian,['t_x2' 't_x3' 't_x5' 't_x7'],0.6980870032704628,nb
+Gaussian,['t_x2' 't_x3' 't_x5' 't_x8'],0.6227767573137405,nb
+Gaussian,['t_x2' 't_x3' 't_x6' 't_x7'],0.6122410883622299,nb
+Gaussian,['t_x2' 't_x3' 't_x6' 't_x8'],0.5301733793288831,nb
+Gaussian,['t_x2' 't_x3' 't_x7' 't_x8'],0.631960933649926,nb
+Gaussian,['t_x2' 't_x4' 't_x5' 't_x6'],0.7208981079103385,nb
+Gaussian,['t_x2' 't_x4' 't_x5' 't_x7'],0.7526992518256351,nb
+Gaussian,['t_x2' 't_x4' 't_x5' 't_x8'],0.7371832205845018,nb
+Gaussian,['t_x2' 't_x4' 't_x6' 't_x7'],0.6782402222122665,nb
+Gaussian,['t_x2' 't_x4' 't_x6' 't_x8'],0.671445425085495,nb
+Gaussian,['t_x2' 't_x4' 't_x7' 't_x8'],0.7303062885474066,nb
+Gaussian,['t_x2' 't_x5' 't_x6' 't_x7'],0.7531547272374296,nb
+Gaussian,['t_x2' 't_x5' 't_x6' 't_x8'],0.7370413511939429,nb
+Gaussian,['t_x2' 't_x5' 't_x7' 't_x8'],0.7610098113883786,nb
+Gaussian,['t_x2' 't_x6' 't_x7' 't_x8'],0.7247659155055777,nb
+Gaussian,['t_x3' 't_x4' 't_x5' 't_x6'],0.45062198527545066,nb
+Gaussian,['t_x3' 't_x4' 't_x5' 't_x7'],0.594485014112271,nb
+Gaussian,['t_x3' 't_x4' 't_x5' 't_x8'],0.5273359915177038,nb
+Gaussian,['t_x3' 't_x4' 't_x6' 't_x7'],0.5464883592431641,nb
+Gaussian,['t_x3' 't_x4' 't_x6' 't_x8'],0.47696489105924167,nb
+Gaussian,['t_x3' 't_x4' 't_x7' 't_x8'],0.5697474724848051,nb
+Gaussian,['t_x3' 't_x5' 't_x6' 't_x7'],0.6030643788360737,nb
+Gaussian,['t_x3' 't_x5' 't_x6' 't_x8'],0.5298000388274122,nb
+Gaussian,['t_x3' 't_x5' 't_x7' 't_x8'],0.6376133088421964,nb
+Gaussian,['t_x3' 't_x6' 't_x7' 't_x8'],0.5687095858907157,nb
+Gaussian,['t_x4' 't_x5' 't_x6' 't_x7'],0.8290772516165643,nb
+Gaussian,['t_x4' 't_x5' 't_x6' 't_x8'],0.828517240864358,nb
+Gaussian,['t_x4' 't_x5' 't_x7' 't_x8'],0.8035706285560683,nb
+Gaussian,['t_x4' 't_x6' 't_x7' 't_x8'],0.7922957454116452,nb
+Gaussian,['t_x5' 't_x6' 't_x7' 't_x8'],0.8215208398667921,nb
+Gaussian,['t_x1' 't_x2' 't_x3' 't_x4' 't_x5'],0.6939354568941057,nb
+Gaussian,['t_x1' 't_x2' 't_x3' 't_x4' 't_x6'],0.5649687140659767,nb
+Gaussian,['t_x1' 't_x2' 't_x3' 't_x4' 't_x7'],0.7065618326538535,nb
+Gaussian,['t_x1' 't_x2' 't_x3' 't_x4' 't_x8'],0.6315726595283963,nb
+Gaussian,['t_x1' 't_x2' 't_x3' 't_x5' 't_x6'],0.7088765437629735,nb
+Gaussian,['t_x1' 't_x2' 't_x3' 't_x5' 't_x7'],0.7585756313187879,nb
+Gaussian,['t_x1' 't_x2' 't_x3' 't_x5' 't_x8'],0.7385944476800622,nb
+Gaussian,['t_x1' 't_x2' 't_x3' 't_x6' 't_x7'],0.7080775950898257,nb
+Gaussian,['t_x1' 't_x2' 't_x3' 't_x6' 't_x8'],0.6440720995176441,nb
+Gaussian,['t_x1' 't_x2' 't_x3' 't_x7' 't_x8'],0.7031793677105268,nb
+Gaussian,['t_x1' 't_x2' 't_x4' 't_x5' 't_x6'],0.7127294177381539,nb
+Gaussian,['t_x1' 't_x2' 't_x4' 't_x5' 't_x7'],0.7366082762122366,nb
+Gaussian,['t_x1' 't_x2' 't_x4' 't_x5' 't_x8'],0.726266744321491,nb
+Gaussian,['t_x1' 't_x2' 't_x4' 't_x6' 't_x7'],0.7044561922255573,nb
+Gaussian,['t_x1' 't_x2' 't_x4' 't_x6' 't_x8'],0.7067410360945597,nb
+Gaussian,['t_x1' 't_x2' 't_x4' 't_x7' 't_x8'],0.7218986604542809,nb
+Gaussian,['t_x1' 't_x2' 't_x5' 't_x6' 't_x7'],0.734868509475382,nb
+Gaussian,['t_x1' 't_x2' 't_x5' 't_x6' 't_x8'],0.7299702820960828,nb
+Gaussian,['t_x1' 't_x2' 't_x5' 't_x7' 't_x8'],0.7498469303943969,nb
+Gaussian,['t_x1' 't_x2' 't_x6' 't_x7' 't_x8'],0.7262816779415499,nb
+Gaussian,['t_x1' 't_x3' 't_x4' 't_x5' 't_x6'],0.5188760957543718,nb
+Gaussian,['t_x1' 't_x3' 't_x4' 't_x5' 't_x7'],0.6825709720293296,nb
+Gaussian,['t_x1' 't_x3' 't_x4' 't_x5' 't_x8'],0.6068873855711364,nb
+Gaussian,['t_x1' 't_x3' 't_x4' 't_x6' 't_x7'],0.5902363992055314,nb
+Gaussian,['t_x1' 't_x3' 't_x4' 't_x6' 't_x8'],0.5232591132416409,nb
+Gaussian,['t_x1' 't_x3' 't_x4' 't_x7' 't_x8'],0.6360676791661066,nb
+Gaussian,['t_x1' 't_x3' 't_x5' 't_x6' 't_x7'],0.6981019368905216,nb
+Gaussian,['t_x1' 't_x3' 't_x5' 't_x6' 't_x8'],0.6186849454176188,nb
+Gaussian,['t_x1' 't_x3' 't_x5' 't_x7' 't_x8'],0.6973552558875799,nb
+Gaussian,['t_x1' 't_x3' 't_x6' 't_x7' 't_x8'],0.6335513641861924,nb
+Gaussian,['t_x1' 't_x4' 't_x5' 't_x6' 't_x7'],0.8030330182339501,nb
+Gaussian,['t_x1' 't_x4' 't_x5' 't_x6' 't_x8'],0.7947672595313829,nb
+Gaussian,['t_x1' 't_x4' 't_x5' 't_x7' 't_x8'],0.8076475068321312,nb
+Gaussian,['t_x1' 't_x4' 't_x6' 't_x7' 't_x8'],0.8222451204396458,nb
+Gaussian,['t_x1' 't_x5' 't_x6' 't_x7' 't_x8'],0.8144871048190793,nb
+Gaussian,['t_x2' 't_x3' 't_x4' 't_x5' 't_x6'],0.594485014112271,nb
+Gaussian,['t_x2' 't_x3' 't_x4' 't_x5' 't_x7'],0.7000059734480235,nb
+Gaussian,['t_x2' 't_x3' 't_x4' 't_x5' 't_x8'],0.6280333915744515,nb
+Gaussian,['t_x2' 't_x3' 't_x4' 't_x6' 't_x7'],0.6248226632618014,nb
+Gaussian,['t_x2' 't_x3' 't_x4' 't_x6' 't_x8'],0.5358033540910653,nb
+Gaussian,['t_x2' 't_x3' 't_x4' 't_x7' 't_x8'],0.6406000328539642,nb
+Gaussian,['t_x2' 't_x3' 't_x5' 't_x6' 't_x7'],0.7024476203276436,nb
+Gaussian,['t_x2' 't_x3' 't_x5' 't_x6' 't_x8'],0.6382330540746383,nb
+Gaussian,['t_x2' 't_x3' 't_x5' 't_x7' 't_x8'],0.6971013843465794,nb
+Gaussian,['t_x2' 't_x3' 't_x6' 't_x7' 't_x8'],0.6451174529217627,nb
+Gaussian,['t_x2' 't_x4' 't_x5' 't_x6' 't_x7'],0.7517957678120754,nb
+Gaussian,['t_x2' 't_x4' 't_x5' 't_x6' 't_x8'],0.7379000343473261,nb
+Gaussian,['t_x2' 't_x4' 't_x5' 't_x7' 't_x8'],0.7653032271552948,nb
+Gaussian,['t_x2' 't_x4' 't_x6' 't_x7' 't_x8'],0.7307468303391426,nb
+Gaussian,['t_x2' 't_x5' 't_x6' 't_x7' 't_x8'],0.770686797186506,nb
+Gaussian,['t_x3' 't_x4' 't_x5' 't_x6' 't_x7'],0.6047220106626048,nb
+Gaussian,['t_x3' 't_x4' 't_x5' 't_x6' 't_x8'],0.5290010901542642,nb
+Gaussian,['t_x3' 't_x4' 't_x5' 't_x7' 't_x8'],0.6391290712781686,nb
+Gaussian,['t_x3' 't_x4' 't_x6' 't_x7' 't_x8'],0.5710690978600123,nb
+Gaussian,['t_x3' 't_x5' 't_x6' 't_x7' 't_x8'],0.6482833803742365,nb
+Gaussian,['t_x4' 't_x5' 't_x6' 't_x7' 't_x8'],0.8254334483222078,nb
+Gaussian,['t_x1' 't_x2' 't_x3' 't_x4' 't_x5' 't_x6'],0.7151113301375386,nb
+Gaussian,['t_x1' 't_x2' 't_x3' 't_x4' 't_x5' 't_x7'],0.7692606364708868,nb
+Gaussian,['t_x1' 't_x2' 't_x3' 't_x4' 't_x5' 't_x8'],0.7436046772098024,nb
+Gaussian,['t_x1' 't_x2' 't_x3' 't_x4' 't_x6' 't_x7'],0.7152681331481565,nb
+Gaussian,['t_x1' 't_x2' 't_x3' 't_x4' 't_x6' 't_x8'],0.6507175604438272,nb
+Gaussian,['t_x1' 't_x2' 't_x3' 't_x4' 't_x7' 't_x8'],0.7106387109299165,nb
+Gaussian,['t_x1' 't_x2' 't_x3' 't_x5' 't_x6' 't_x7'],0.7755028896554813,nb
+Gaussian,['t_x1' 't_x2' 't_x3' 't_x5' 't_x6' 't_x8'],0.7436942789301555,nb
+Gaussian,['t_x1' 't_x2' 't_x3' 't_x5' 't_x7' 't_x8'],0.7384077774293267,nb
+Gaussian,['t_x1' 't_x2' 't_x3' 't_x6' 't_x7' 't_x8'],0.7106909786001224,nb
+Gaussian,['t_x1' 't_x2' 't_x4' 't_x5' 't_x6' 't_x7'],0.7391395248122098,nb
+Gaussian,['t_x1' 't_x2' 't_x4' 't_x5' 't_x6' 't_x8'],0.7278347744276691,nb
+Gaussian,['t_x1' 't_x2' 't_x4' 't_x5' 't_x7' 't_x8'],0.7540432776309306,nb
+Gaussian,['t_x1' 't_x2' 't_x4' 't_x6' 't_x7' 't_x8'],0.7263414124217853,nb
+Gaussian,['t_x1' 't_x2' 't_x5' 't_x6' 't_x7' 't_x8'],0.75160909756134,nb
+Gaussian,['t_x1' 't_x3' 't_x4' 't_x5' 't_x6' 't_x7'],0.6972731209772561,nb
+Gaussian,['t_x1' 't_x3' 't_x4' 't_x5' 't_x6' 't_x8'],0.6204023117243851,nb
+Gaussian,['t_x1' 't_x3' 't_x4' 't_x5' 't_x7' 't_x8'],0.7009318578916716,nb
+Gaussian,['t_x1' 't_x3' 't_x4' 't_x6' 't_x7' 't_x8'],0.6361498140764302,nb
+Gaussian,['t_x1' 't_x3' 't_x5' 't_x6' 't_x7' 't_x8'],0.7113331242626525,nb
+Gaussian,['t_x1' 't_x4' 't_x5' 't_x6' 't_x7' 't_x8'],0.818616250765348,nb
+Gaussian,['t_x2' 't_x3' 't_x4' 't_x5' 't_x6' 't_x7'],0.7102877708585339,nb
+Gaussian,['t_x2' 't_x3' 't_x4' 't_x5' 't_x6' 't_x8'],0.6559219270343324,nb
+Gaussian,['t_x2' 't_x3' 't_x4' 't_x5' 't_x7' 't_x8'],0.7059570210414706,nb
+Gaussian,['t_x2' 't_x3' 't_x4' 't_x6' 't_x7' 't_x8'],0.6530024043128294,nb
+Gaussian,['t_x2' 't_x3' 't_x5' 't_x6' 't_x7' 't_x8'],0.7070247748756776,nb
+Gaussian,['t_x2' 't_x4' 't_x5' 't_x6' 't_x7' 't_x8'],0.7726804354643609,nb
+Gaussian,['t_x3' 't_x4' 't_x5' 't_x6' 't_x7' 't_x8'],0.646618281737676,nb
+Gaussian,['t_x1' 't_x2' 't_x3' 't_x4' 't_x5' 't_x6' 't_x7'],0.7820587488613114,nb
+Gaussian,['t_x1' 't_x2' 't_x3' 't_x4' 't_x5' 't_x6' 't_x8'],0.7440676194316264,nb
+Gaussian,['t_x1' 't_x2' 't_x3' 't_x4' 't_x5' 't_x7' 't_x8'],0.7555739736869613,nb
+Gaussian,['t_x1' 't_x2' 't_x3' 't_x4' 't_x6' 't_x7' 't_x8'],0.720442632498544,nb
+Gaussian,['t_x1' 't_x2' 't_x3' 't_x5' 't_x6' 't_x7' 't_x8'],0.7657437689470304,nb
+Gaussian,['t_x1' 't_x2' 't_x4' 't_x5' 't_x6' 't_x7' 't_x8'],0.757754282215552,nb
+Gaussian,['t_x1' 't_x3' 't_x4' 't_x5' 't_x6' 't_x7' 't_x8'],0.7095410898555919,nb
+Gaussian,['t_x2' 't_x3' 't_x4' 't_x5' 't_x6' 't_x7' 't_x8'],0.7114824604632409,nb
+Gaussian,['t_x1' 't_x2' 't_x3' 't_x4' 't_x5' 't_x6' 't_x7' 't_x8'],0.7752415513044517,nb
+newton-cg,['t_x1' 't_x2'],0.7449412362050686,lr
+newton-cg,['t_x1' 't_x3'],0.7905485118647612,lr
+newton-cg,['t_x1' 't_x4'],0.8916789869032152,lr
+newton-cg,['t_x1' 't_x5'],0.8032346221047444,lr
+newton-cg,['t_x1' 't_x6'],0.7787136179681317,lr
+newton-cg,['t_x1' 't_x7'],0.7929453578842048,lr
+newton-cg,['t_x1' 't_x8'],0.7766229111598942,lr
+newton-cg,['t_x2' 't_x3'],0.6744321490972628,lr
+newton-cg,['t_x2' 't_x4'],0.671908367307319,lr
+newton-cg,['t_x2' 't_x5'],0.8061018771560414,lr
+newton-cg,['t_x2' 't_x6'],0.6734987978435852,lr
+newton-cg,['t_x2' 't_x7'],0.7844854621208728,lr
+newton-cg,['t_x2' 't_x8'],0.7056732822603528,lr
+newton-cg,['t_x3' 't_x4'],0.6305571733643952,lr
+newton-cg,['t_x3' 't_x5'],0.8190119916969071,lr
+newton-cg,['t_x3' 't_x6'],0.6059092334572824,lr
+newton-cg,['t_x3' 't_x7'],0.8191986619476427,lr
+newton-cg,['t_x3' 't_x8'],0.7556859758374027,lr
+newton-cg,['t_x4' 't_x5'],0.8795080865552619,lr
+newton-cg,['t_x4' 't_x6'],0.6251661365231546,lr
+newton-cg,['t_x4' 't_x7'],0.8368576676672191,lr
+newton-cg,['t_x4' 't_x8'],0.7526395173453997,lr
+newton-cg,['t_x5' 't_x6'],0.799381748129564,lr
+newton-cg,['t_x5' 't_x7'],0.8060496094858355,lr
+newton-cg,['t_x5' 't_x8'],0.8060272090557472,lr
+newton-cg,['t_x6' 't_x7'],0.7986948016068576,lr
+newton-cg,['t_x6' 't_x8'],0.739430730403357,lr
+newton-cg,['t_x7' 't_x8'],0.7953048698535011,lr
+newton-cg,['t_x1' 't_x2' 't_x3'],0.7908471842659379,lr
+newton-cg,['t_x1' 't_x2' 't_x4'],0.8921568627450981,lr
+newton-cg,['t_x1' 't_x2' 't_x5'],0.8036602302764213,lr
+newton-cg,['t_x1' 't_x2' 't_x6'],0.7813867359586637,lr
+newton-cg,['t_x1' 't_x2' 't_x7'],0.7932290966653227,lr
+newton-cg,['t_x1' 't_x2' 't_x8'],0.7763167719486881,lr
+newton-cg,['t_x1' 't_x3' 't_x4'],0.8984588504099279,lr
+newton-cg,['t_x1' 't_x3' 't_x5'],0.8162791392261398,lr
+newton-cg,['t_x1' 't_x3' 't_x6'],0.8067365560085419,lr
+newton-cg,['t_x1' 't_x3' 't_x7'],0.8179965055329063,lr
+newton-cg,['t_x1' 't_x3' 't_x8'],0.7883383360960531,lr
+newton-cg,['t_x1' 't_x4' 't_x5'],0.8932395501993637,lr
+newton-cg,['t_x1' 't_x4' 't_x6'],0.8909472395203322,lr
+newton-cg,['t_x1' 't_x4' 't_x7'],0.8949195824559831,lr
+newton-cg,['t_x1' 't_x4' 't_x8'],0.8891776055433597,lr
+newton-cg,['t_x1' 't_x5' 't_x6'],0.8093648731388976,lr
+newton-cg,['t_x1' 't_x5' 't_x7'],0.8033988919253917,lr
+newton-cg,['t_x1' 't_x5' 't_x8'],0.8033391574451563,lr
+newton-cg,['t_x1' 't_x6' 't_x7'],0.795887281035796,lr
+newton-cg,['t_x1' 't_x6' 't_x8'],0.7769215835610709,lr
+newton-cg,['t_x1' 't_x7' 't_x8'],0.7944760539402357,lr
+newton-cg,['t_x2' 't_x3' 't_x4'],0.6710944850141122,lr
+newton-cg,['t_x2' 't_x3' 't_x5'],0.819041858937025,lr
+newton-cg,['t_x2' 't_x3' 't_x6'],0.6737004017143796,lr
+newton-cg,['t_x2' 't_x3' 't_x7'],0.7972910413213267,lr
+newton-cg,['t_x2' 't_x3' 't_x8'],0.7178367157982767,lr
+newton-cg,['t_x2' 't_x4' 't_x5'],0.880329435658498,lr
+newton-cg,['t_x2' 't_x4' 't_x6'],0.6736854680943208,lr
+newton-cg,['t_x2' 't_x4' 't_x7'],0.836372325015307,lr
+newton-cg,['t_x2' 't_x4' 't_x8'],0.7428430625868017,lr
+newton-cg,['t_x2' 't_x5' 't_x6'],0.7999492256917998,lr
+newton-cg,['t_x2' 't_x5' 't_x7'],0.8061466780162179,lr
+newton-cg,['t_x2' 't_x5' 't_x8'],0.8061317443961591,lr
+newton-cg,['t_x2' 't_x6' 't_x7'],0.7944013858399415,lr
+newton-cg,['t_x2' 't_x6' 't_x8'],0.7359586637396771,lr
+newton-cg,['t_x2' 't_x7' 't_x8'],0.7960291504263549,lr
+newton-cg,['t_x3' 't_x4' 't_x5'],0.8903200274778609,lr
+newton-cg,['t_x3' 't_x4' 't_x6'],0.6300120962322477,lr
+newton-cg,['t_x3' 't_x4' 't_x7'],0.8485208249331722,lr
+newton-cg,['t_x3' 't_x4' 't_x8'],0.764683481922853,lr
+newton-cg,['t_x3' 't_x5' 't_x6'],0.8188029210160835,lr
+newton-cg,['t_x3' 't_x5' 't_x7'],0.8188701223063483,lr
+newton-cg,['t_x3' 't_x5' 't_x8'],0.8187357197258187,lr
+newton-cg,['t_x3' 't_x6' 't_x7'],0.8260531935546496,lr
+newton-cg,['t_x3' 't_x6' 't_x8'],0.7473306154144828,lr
+newton-cg,['t_x3' 't_x7' 't_x8'],0.8164732762869047,lr
+newton-cg,['t_x4' 't_x5' 't_x6'],0.8980631094783686,lr
+newton-cg,['t_x4' 't_x5' 't_x7'],0.8816958618938817,lr
+newton-cg,['t_x4' 't_x5' 't_x8'],0.8847572540059435,lr
+newton-cg,['t_x4' 't_x6' 't_x7'],0.8958604005196901,lr
+newton-cg,['t_x4' 't_x6' 't_x8'],0.7809237937368397,lr
+newton-cg,['t_x4' 't_x7' 't_x8'],0.851582217045234,lr
+newton-cg,['t_x5' 't_x6' 't_x7'],0.7983214611053865,lr
+newton-cg,['t_x5' 't_x6' 't_x8'],0.7944685871302063,lr
+newton-cg,['t_x5' 't_x7' 't_x8'],0.806042142675806,lr
+newton-cg,['t_x6' 't_x7' 't_x8'],0.8021743350805669,lr
+newton-cg,['t_x1' 't_x2' 't_x3' 't_x4'],0.8977868375072801,lr
+newton-cg,['t_x1' 't_x2' 't_x3' 't_x5'],0.8162492719860222,lr
+newton-cg,['t_x1' 't_x2' 't_x3' 't_x6'],0.8109702372952228,lr
+newton-cg,['t_x1' 't_x2' 't_x3' 't_x7'],0.8184743813747891,lr
+newton-cg,['t_x1' 't_x2' 't_x3' 't_x8'],0.7889954153786419,lr
+newton-cg,['t_x1' 't_x2' 't_x4' 't_x5'],0.8948150471155714,lr
+newton-cg,['t_x1' 't_x2' 't_x4' 't_x6'],0.8926496722070397,lr
+newton-cg,['t_x1' 't_x2' 't_x4' 't_x7'],0.895203321237101,lr
+newton-cg,['t_x1' 't_x2' 't_x4' 't_x8'],0.8918955243940684,lr
+newton-cg,['t_x1' 't_x2' 't_x5' 't_x6'],0.8093499395188388,lr
+newton-cg,['t_x1' 't_x2' 't_x5' 't_x7'],0.8035706285560683,lr
+newton-cg,['t_x1' 't_x2' 't_x5' 't_x8'],0.8037498319967744,lr
+newton-cg,['t_x1' 't_x2' 't_x6' 't_x7'],0.7962008870570315,lr
+newton-cg,['t_x1' 't_x2' 't_x6' 't_x8'],0.7773023908725714,lr
+newton-cg,['t_x1' 't_x2' 't_x7' 't_x8'],0.7946776578110301,lr
+newton-cg,['t_x1' 't_x3' 't_x4' 't_x5'],0.902274390334961,lr
+newton-cg,['t_x1' 't_x3' 't_x4' 't_x6'],0.900079148186312,lr
+newton-cg,['t_x1' 't_x3' 't_x4' 't_x7'],0.9009975658199304,lr
+newton-cg,['t_x1' 't_x3' 't_x4' 't_x8'],0.9010050326299598,lr
+newton-cg,['t_x1' 't_x3' 't_x5' 't_x6'],0.8245448979287069,lr
+newton-cg,['t_x1' 't_x3' 't_x5' 't_x7'],0.8158609978644923,lr
+newton-cg,['t_x1' 't_x3' 't_x5' 't_x8'],0.8154204560727566,lr
+newton-cg,['t_x1' 't_x3' 't_x6' 't_x7'],0.8155175246031391,lr
+newton-cg,['t_x1' 't_x3' 't_x6' 't_x8'],0.8096710123501039,lr
+newton-cg,['t_x1' 't_x3' 't_x7' 't_x8'],0.8196690709794962,lr
+newton-cg,['t_x1' 't_x4' 't_x5' 't_x6'],0.8984439167898689,lr
+newton-cg,['t_x1' 't_x4' 't_x5' 't_x7'],0.8938443618117468,lr
+newton-cg,['t_x1' 't_x4' 't_x5' 't_x8'],0.8937846273315114,lr
+newton-cg,['t_x1' 't_x4' 't_x6' 't_x7'],0.894344638083718,lr
+newton-cg,['t_x1' 't_x4' 't_x6' 't_x8'],0.8916267192330092,lr
+newton-cg,['t_x1' 't_x4' 't_x7' 't_x8'],0.8940907665427176,lr
+newton-cg,['t_x1' 't_x5' 't_x6' 't_x7'],0.809924883891104,lr
+newton-cg,['t_x1' 't_x5' 't_x6' 't_x8'],0.8056090676940997,lr
+newton-cg,['t_x1' 't_x5' 't_x7' 't_x8'],0.803354091065215,lr
+newton-cg,['t_x1' 't_x6' 't_x7' 't_x8'],0.7973731762316504,lr
+newton-cg,['t_x2' 't_x3' 't_x4' 't_x5'],0.8906112330690084,lr
+newton-cg,['t_x2' 't_x3' 't_x4' 't_x6'],0.6749622926093514,lr
+newton-cg,['t_x2' 't_x3' 't_x4' 't_x7'],0.8479160133207891,lr
+newton-cg,['t_x2' 't_x3' 't_x4' 't_x8'],0.7540283440108717,lr
+newton-cg,['t_x2' 't_x3' 't_x5' 't_x6'],0.8194600002986724,lr
+newton-cg,['t_x2' 't_x3' 't_x5' 't_x7'],0.8187282529157893,lr
+newton-cg,['t_x2' 't_x3' 't_x5' 't_x8'],0.819131460657378,lr
+newton-cg,['t_x2' 't_x3' 't_x6' 't_x7'],0.8257246539133551,lr
+newton-cg,['t_x2' 't_x3' 't_x6' 't_x8'],0.7511610889595747,lr
+newton-cg,['t_x2' 't_x3' 't_x7' 't_x8'],0.8072517659005719,lr
+newton-cg,['t_x2' 't_x4' 't_x5' 't_x6'],0.899086062452399,lr
+newton-cg,['t_x2' 't_x4' 't_x5' 't_x7'],0.8825993459074414,lr
+newton-cg,['t_x2' 't_x4' 't_x5' 't_x8'],0.8844511147947373,lr
+newton-cg,['t_x2' 't_x4' 't_x6' 't_x7'],0.8953899914878365,lr
+newton-cg,['t_x2' 't_x4' 't_x6' 't_x8'],0.7883383360960531,lr
+newton-cg,['t_x2' 't_x4' 't_x7' 't_x8'],0.8494317757567612,lr
+newton-cg,['t_x2' 't_x5' 't_x6' 't_x7'],0.7989561399578872,lr
+newton-cg,['t_x2' 't_x5' 't_x6' 't_x8'],0.796103818526649,lr
+newton-cg,['t_x2' 't_x5' 't_x7' 't_x8'],0.8061466780162179,lr
+newton-cg,['t_x2' 't_x6' 't_x7' 't_x8'],0.7941325806788825,lr
+newton-cg,['t_x3' 't_x4' 't_x5' 't_x6'],0.9074414228753191,lr
+newton-cg,['t_x3' 't_x4' 't_x5' 't_x7'],0.8911488433911264,lr
+newton-cg,['t_x3' 't_x4' 't_x5' 't_x8'],0.8919776593043919,lr
+newton-cg,['t_x3' 't_x4' 't_x6' 't_x7'],0.9025506623060496,lr
+newton-cg,['t_x3' 't_x4' 't_x6' 't_x8'],0.7921688096411451,lr
+newton-cg,['t_x3' 't_x4' 't_x7' 't_x8'],0.8592879649955947,lr
+newton-cg,['t_x3' 't_x5' 't_x6' 't_x7'],0.819915475710467,lr
+newton-cg,['t_x3' 't_x5' 't_x6' 't_x8'],0.8217373773576453,lr
+newton-cg,['t_x3' 't_x5' 't_x7' 't_x8'],0.8187357197258187,lr
+newton-cg,['t_x3' 't_x6' 't_x7' 't_x8'],0.8263443991457969,lr
+newton-cg,['t_x4' 't_x5' 't_x6' 't_x7'],0.8996834072547526,lr
+newton-cg,['t_x4' 't_x5' 't_x6' 't_x8'],0.8987873900512223,lr
+newton-cg,['t_x4' 't_x5' 't_x7' 't_x8'],0.884018039813031,lr
+newton-cg,['t_x4' 't_x6' 't_x7' 't_x8'],0.8945686423846005,lr
+newton-cg,['t_x5' 't_x6' 't_x7' 't_x8'],0.7956856771650016,lr
+newton-cg,['t_x1' 't_x2' 't_x3' 't_x4' 't_x5'],0.9044920329136986,lr
+newton-cg,['t_x1' 't_x2' 't_x3' 't_x4' 't_x6'],0.9022893239550199,lr
+newton-cg,['t_x1' 't_x2' 't_x3' 't_x4' 't_x7'],0.9039693562116392,lr
+newton-cg,['t_x1' 't_x2' 't_x3' 't_x4' 't_x8'],0.902080253274196,lr
+newton-cg,['t_x1' 't_x2' 't_x3' 't_x5' 't_x6'],0.8242387587175006,lr
+newton-cg,['t_x1' 't_x2' 't_x3' 't_x5' 't_x7'],0.8155847258934038,lr
+newton-cg,['t_x1' 't_x2' 't_x3' 't_x5' 't_x8'],0.8159730000149336,lr
+newton-cg,['t_x1' 't_x2' 't_x3' 't_x6' 't_x7'],0.8197362722697609,lr
+newton-cg,['t_x1' 't_x2' 't_x3' 't_x6' 't_x8'],0.8115377148574585,lr
+newton-cg,['t_x1' 't_x2' 't_x3' 't_x7' 't_x8'],0.8200200110508788,lr
+newton-cg,['t_x1' 't_x2' 't_x4' 't_x5' 't_x6'],0.8986455206606633,lr
+newton-cg,['t_x1' 't_x2' 't_x4' 't_x5' 't_x7'],0.8948897152158656,lr
+newton-cg,['t_x1' 't_x2' 't_x4' 't_x5' 't_x8'],0.8947478458253065,lr
+newton-cg,['t_x1' 't_x2' 't_x4' 't_x6' 't_x7'],0.8956214625987485,lr
+newton-cg,['t_x1' 't_x2' 't_x4' 't_x6' 't_x8'],0.8935232889804817,lr
+newton-cg,['t_x1' 't_x2' 't_x4' 't_x7' 't_x8'],0.8947702462553947,lr
+newton-cg,['t_x1' 't_x2' 't_x5' 't_x6' 't_x7'],0.8094619416692801,lr
+newton-cg,['t_x1' 't_x2' 't_x5' 't_x6' 't_x8'],0.8055568000238938,lr
+newton-cg,['t_x1' 't_x2' 't_x5' 't_x7' 't_x8'],0.8035780953660977,lr
+newton-cg,['t_x1' 't_x2' 't_x6' 't_x7' 't_x8'],0.7973806430416798,lr
+newton-cg,['t_x1' 't_x3' 't_x4' 't_x5' 't_x6'],0.9076056926959665,lr
+newton-cg,['t_x1' 't_x3' 't_x4' 't_x5' 't_x7'],0.9022445230948434,lr
+newton-cg,['t_x1' 't_x3' 't_x4' 't_x5' 't_x8'],0.9015650433821664,lr
+newton-cg,['t_x1' 't_x3' 't_x4' 't_x6' 't_x7'],0.9028418678971969,lr
+newton-cg,['t_x1' 't_x3' 't_x4' 't_x6' 't_x8'],0.9004151546376358,lr
+newton-cg,['t_x1' 't_x3' 't_x4' 't_x7' 't_x8'],0.9012813046010484,lr
+newton-cg,['t_x1' 't_x3' 't_x5' 't_x6' 't_x7'],0.8307647506832131,lr
+newton-cg,['t_x1' 't_x3' 't_x5' 't_x6' 't_x8'],0.8253811806520018,lr
+newton-cg,['t_x1' 't_x3' 't_x5' 't_x7' 't_x8'],0.8153383211624329,lr
+newton-cg,['t_x1' 't_x3' 't_x6' 't_x7' 't_x8'],0.819131460657378,lr
+newton-cg,['t_x1' 't_x4' 't_x5' 't_x6' 't_x7'],0.900011946896047,lr
+newton-cg,['t_x1' 't_x4' 't_x5' 't_x6' 't_x8'],0.9000492809461941,lr
+newton-cg,['t_x1' 't_x4' 't_x5' 't_x7' 't_x8'],0.8936651583710408,lr
+newton-cg,['t_x1' 't_x4' 't_x6' 't_x7' 't_x8'],0.8950166509863656,lr
+newton-cg,['t_x1' 't_x5' 't_x6' 't_x7' 't_x8'],0.8069605603094246,lr
+newton-cg,['t_x2' 't_x3' 't_x4' 't_x5' 't_x6'],0.9098532025148217,lr
+newton-cg,['t_x2' 't_x3' 't_x4' 't_x5' 't_x7'],0.8923659334259217,lr
+newton-cg,['t_x2' 't_x3' 't_x4' 't_x5' 't_x8'],0.8933963532099817,lr
+newton-cg,['t_x2' 't_x3' 't_x4' 't_x6' 't_x7'],0.9027223989367262,lr
+newton-cg,['t_x2' 't_x3' 't_x4' 't_x6' 't_x8'],0.7931096277048519,lr
+newton-cg,['t_x2' 't_x3' 't_x4' 't_x7' 't_x8'],0.8585711512327704,lr
+newton-cg,['t_x2' 't_x3' 't_x5' 't_x6' 't_x7'],0.8202216149216731,lr
+newton-cg,['t_x2' 't_x3' 't_x5' 't_x6' 't_x8'],0.8222899212998223,lr
+newton-cg,['t_x2' 't_x3' 't_x5' 't_x7' 't_x8'],0.8188626554963188,lr
+newton-cg,['t_x2' 't_x3' 't_x6' 't_x7' 't_x8'],0.8260681271747083,lr
+newton-cg,['t_x2' 't_x4' 't_x5' 't_x6' 't_x7'],0.8999895464659587,lr
+newton-cg,['t_x2' 't_x4' 't_x5' 't_x6' 't_x8'],0.9009826321998715,lr
+newton-cg,['t_x2' 't_x4' 't_x5' 't_x7' 't_x8'],0.8850484595970909,lr
+newton-cg,['t_x2' 't_x4' 't_x6' 't_x7' 't_x8'],0.8943670385138062,lr
+newton-cg,['t_x2' 't_x5' 't_x6' 't_x7' 't_x8'],0.7996206860505056,lr
+newton-cg,['t_x3' 't_x4' 't_x5' 't_x6' 't_x7'],0.9099353374251452,lr
+newton-cg,['t_x3' 't_x4' 't_x5' 't_x6' 't_x8'],0.9093827934829681,lr
+newton-cg,['t_x3' 't_x4' 't_x5' 't_x7' 't_x8'],0.8924854023863925,lr
+newton-cg,['t_x3' 't_x4' 't_x6' 't_x7' 't_x8'],0.9019906515538431,lr
+newton-cg,['t_x3' 't_x5' 't_x6' 't_x7' 't_x8'],0.8220061825187045,lr
+newton-cg,['t_x4' 't_x5' 't_x6' 't_x7' 't_x8'],0.9001314158565178,lr
+newton-cg,['t_x1' 't_x2' 't_x3' 't_x4' 't_x5' 't_x6'],0.9098158684646744,lr
+newton-cg,['t_x1' 't_x2' 't_x3' 't_x4' 't_x5' 't_x7'],0.9044248316234338,lr
+newton-cg,['t_x1' 't_x2' 't_x3' 't_x4' 't_x5' 't_x8'],0.9044322984334633,lr
+newton-cg,['t_x1' 't_x2' 't_x3' 't_x4' 't_x6' 't_x7'],0.903932022161492,lr
+newton-cg,['t_x1' 't_x2' 't_x3' 't_x4' 't_x6' 't_x8'],0.9023042575750787,lr
+newton-cg,['t_x1' 't_x2' 't_x3' 't_x4' 't_x7' 't_x8'],0.903148007108403,lr
+newton-cg,['t_x1' 't_x2' 't_x3' 't_x5' 't_x6' 't_x7'],0.8300927377805655,lr
+newton-cg,['t_x1' 't_x2' 't_x3' 't_x5' 't_x6' 't_x8'],0.8251123754909427,lr
+newton-cg,['t_x1' 't_x2' 't_x3' 't_x5' 't_x7' 't_x8'],0.8156145931335215,lr
+newton-cg,['t_x1' 't_x2' 't_x3' 't_x6' 't_x7' 't_x8'],0.819967743380673,lr
+newton-cg,['t_x1' 't_x2' 't_x4' 't_x5' 't_x6' 't_x7'],0.9007959619491362,lr
+newton-cg,['t_x1' 't_x2' 't_x4' 't_x5' 't_x6' 't_x8'],0.9011021011603423,lr
+newton-cg,['t_x1' 't_x2' 't_x4' 't_x5' 't_x7' 't_x8'],0.8939190299120409,lr
+newton-cg,['t_x1' 't_x2' 't_x4' 't_x6' 't_x7' 't_x8'],0.8955915953586309,lr
+newton-cg,['t_x1' 't_x2' 't_x5' 't_x6' 't_x7' 't_x8'],0.8066768215283067,lr
+newton-cg,['t_x1' 't_x3' 't_x4' 't_x5' 't_x6' 't_x7'],0.909965204665263,lr
+newton-cg,['t_x1' 't_x3' 't_x4' 't_x5' 't_x6' 't_x8'],0.910144408105969,lr
+newton-cg,['t_x1' 't_x3' 't_x4' 't_x5' 't_x7' 't_x8'],0.9009527649597538,lr
+newton-cg,['t_x1' 't_x3' 't_x4' 't_x6' 't_x7' 't_x8'],0.9021922554246377,lr
+newton-cg,['t_x1' 't_x3' 't_x5' 't_x6' 't_x7' 't_x8'],0.8283305706136224,lr
+newton-cg,['t_x1' 't_x4' 't_x5' 't_x6' 't_x7' 't_x8'],0.9010871675402834,lr
+newton-cg,['t_x2' 't_x3' 't_x4' 't_x5' 't_x6' 't_x7'],0.911301763660529,lr
+newton-cg,['t_x2' 't_x3' 't_x4' 't_x5' 't_x6' 't_x8'],0.9109732240192345,lr
+newton-cg,['t_x2' 't_x3' 't_x4' 't_x5' 't_x7' 't_x8'],0.8936651583710407,lr
+newton-cg,['t_x2' 't_x3' 't_x4' 't_x6' 't_x7' 't_x8'],0.9018039813031077,lr
+newton-cg,['t_x2' 't_x3' 't_x5' 't_x6' 't_x7' 't_x8'],0.8229918014425875,lr
+newton-cg,['t_x2' 't_x4' 't_x5' 't_x6' 't_x7' 't_x8'],0.9009676985798127,lr
+newton-cg,['t_x3' 't_x4' 't_x5' 't_x6' 't_x7' 't_x8'],0.9100249391454982,lr
+newton-cg,['t_x1' 't_x2' 't_x3' 't_x4' 't_x5' 't_x6' 't_x7'],0.9122425817242358,lr
+newton-cg,['t_x1' 't_x2' 't_x3' 't_x4' 't_x5' 't_x6' 't_x8'],0.9118319071726178,lr
+newton-cg,['t_x1' 't_x2' 't_x3' 't_x4' 't_x5' 't_x7' 't_x8'],0.9045816346340517,lr
+newton-cg,['t_x1' 't_x2' 't_x3' 't_x4' 't_x6' 't_x7' 't_x8'],0.9037752191508743,lr
+newton-cg,['t_x1' 't_x2' 't_x3' 't_x5' 't_x6' 't_x7' 't_x8'],0.8280841658826517,lr
+newton-cg,['t_x1' 't_x2' 't_x4' 't_x5' 't_x6' 't_x7' 't_x8'],0.9015053089019309,lr
+newton-cg,['t_x1' 't_x3' 't_x4' 't_x5' 't_x6' 't_x7' 't_x8'],0.9113092304705583,lr
+newton-cg,['t_x2' 't_x3' 't_x4' 't_x5' 't_x6' 't_x7' 't_x8'],0.9116153696817646,lr
+newton-cg,['t_x1' 't_x2' 't_x3' 't_x4' 't_x5' 't_x6' 't_x7' 't_x8'],0.9119140420829414,lr
+linear,['t_x1' 't_x2'],0.7039932500037335,svm
+linear,['t_x1' 't_x3'],0.5062571868046533,svm
+linear,['t_x1' 't_x4'],0.5325104908680913,svm
+linear,['t_x1' 't_x5'],0.6218583396801218,svm
+linear,['t_x1' 't_x6'],0.47171572360856,svm
+linear,['t_x1' 't_x7'],0.729507339874259,svm
+linear,['t_x1' 't_x8'],0.6083508803369025,svm
+linear,['t_x2' 't_x3'],0.662791392261398,svm
+linear,['t_x2' 't_x4'],0.6502247509818854,svm
+linear,['t_x2' 't_x5'],0.6858787688723623,svm
+linear,['t_x2' 't_x6'],0.6062079058584592,svm
+linear,['t_x2' 't_x7'],0.7172319041858937,svm
+linear,['t_x2' 't_x8'],0.6486417872556486,svm
+linear,['t_x3' 't_x4'],0.6067604498006361,svm
+linear,['t_x3' 't_x5'],0.6223884831922106,svm
+linear,['t_x3' 't_x6'],0.6061780386183414,svm
+linear,['t_x3' 't_x7'],0.7177321804578648,svm
+linear,['t_x3' 't_x8'],0.6274061795319804,svm
+linear,['t_x4' 't_x5'],0.6986470140226692,svm
+linear,['t_x4' 't_x6'],0.6061780386183414,svm
+linear,['t_x4' 't_x7'],0.7288278601615819,svm
+linear,['t_x4' 't_x8'],0.6486417872556486,svm
+linear,['t_x5' 't_x6'],0.5251930170392605,svm
+linear,['t_x5' 't_x7'],0.6293923509998058,svm
+linear,['t_x5' 't_x8'],0.621059391006974,svm
+linear,['t_x6' 't_x7'],0.6343876469094875,svm
+linear,['t_x6' 't_x8'],0.6191478876394426,svm
+linear,['t_x7' 't_x8'],0.6743201469468213,svm
+linear,['t_x1' 't_x2' 't_x3'],0.6951674805489598,svm
+linear,['t_x1' 't_x2' 't_x4'],0.7138046383823902,svm
+linear,['t_x1' 't_x2' 't_x5'],0.6654645102519302,svm
+linear,['t_x1' 't_x2' 't_x6'],0.5261189014829085,svm
+linear,['t_x1' 't_x2' 't_x7'],0.7117139315741529,svm
+linear,['t_x1' 't_x2' 't_x8'],0.7111240535818287,svm
+linear,['t_x1' 't_x3' 't_x4'],0.7354434538476472,svm
+linear,['t_x1' 't_x3' 't_x5'],0.6218583396801218,svm
+linear,['t_x1' 't_x3' 't_x6'],0.48814270567328233,svm
+linear,['t_x1' 't_x3' 't_x7'],0.6930991741708108,svm
+linear,['t_x1' 't_x3' 't_x8'],0.6091124949599033,svm
+linear,['t_x1' 't_x4' 't_x5'],0.7296268088347296,svm
+linear,['t_x1' 't_x4' 't_x6'],0.6994608963158759,svm
+linear,['t_x1' 't_x4' 't_x7'],0.7293057360034646,svm
+linear,['t_x1' 't_x4' 't_x8'],0.7243403073339009,svm
+linear,['t_x1' 't_x5' 't_x6'],0.6763660528948824,svm
+linear,['t_x1' 't_x5' 't_x7'],0.6248301300718307,svm
+linear,['t_x1' 't_x5' 't_x8'],0.6563550020160387,svm
+linear,['t_x1' 't_x6' 't_x7'],0.5540597046129953,svm
+linear,['t_x1' 't_x6' 't_x8'],0.44695578155100585,svm
+linear,['t_x1' 't_x7' 't_x8'],0.6194465600406195,svm
+linear,['t_x2' 't_x3' 't_x4'],0.6803085285904156,svm
+linear,['t_x2' 't_x3' 't_x5'],0.6970491166763736,svm
+linear,['t_x2' 't_x3' 't_x6'],0.6062079058584592,svm
+linear,['t_x2' 't_x3' 't_x7'],0.7372130878246196,svm
+linear,['t_x2' 't_x3' 't_x8'],0.6839597986948016,svm
+linear,['t_x2' 't_x4' 't_x5'],0.7523632453743111,svm
+linear,['t_x2' 't_x4' 't_x6'],0.6061780386183414,svm
+linear,['t_x2' 't_x4' 't_x7'],0.7288278601615819,svm
+linear,['t_x2' 't_x4' 't_x8'],0.6827352418499769,svm
+linear,['t_x2' 't_x5' 't_x6'],0.47412750324806235,svm
+linear,['t_x2' 't_x5' 't_x7'],0.6546600361393605,svm
+linear,['t_x2' 't_x5' 't_x8'],0.6313859892776609,svm
+linear,['t_x2' 't_x6' 't_x7'],0.6314009228977197,svm
+linear,['t_x2' 't_x6' 't_x8'],0.6458267998745576,svm
+linear,['t_x2' 't_x7' 't_x8'],0.6394501441094336,svm
+linear,['t_x3' 't_x4' 't_x5'],0.6928751698699283,svm
+linear,['t_x3' 't_x4' 't_x6'],0.6061780386183414,svm
+linear,['t_x3' 't_x4' 't_x7'],0.7285441213804639,svm
+linear,['t_x3' 't_x4' 't_x8'],0.6276152502128041,svm
+linear,['t_x3' 't_x5' 't_x6'],0.4735002912055912,svm
+linear,['t_x3' 't_x5' 't_x7'],0.6293923509998058,svm
+linear,['t_x3' 't_x5' 't_x8'],0.6513597061063572,svm
+linear,['t_x3' 't_x6' 't_x7'],0.652905335782447,svm
+linear,['t_x3' 't_x6' 't_x8'],0.6349924585218703,svm
+linear,['t_x3' 't_x7' 't_x8'],0.6128683004047012,svm
+linear,['t_x4' 't_x5' 't_x6'],0.7398115377148575,svm
+linear,['t_x4' 't_x5' 't_x7'],0.731269507041202,svm
+linear,['t_x4' 't_x5' 't_x8'],0.7130430237593895,svm
+linear,['t_x4' 't_x6' 't_x7'],0.6966011080746085,svm
+linear,['t_x4' 't_x6' 't_x8'],0.6049534817735168,svm
+linear,['t_x4' 't_x7' 't_x8'],0.5302555142392067,svm
+linear,['t_x5' 't_x6' 't_x7'],0.6156683541657333,svm
+linear,['t_x5' 't_x6' 't_x8'],0.6059988351776354,svm
+linear,['t_x5' 't_x7' 't_x8'],0.6235757059868883,svm
+linear,['t_x6' 't_x7' 't_x8'],0.6258978839060377,svm
+linear,['t_x1' 't_x2' 't_x3' 't_x4'],0.7080626614697669,svm
+linear,['t_x1' 't_x2' 't_x3' 't_x5'],0.6833325866523304,svm
+linear,['t_x1' 't_x2' 't_x3' 't_x6'],0.5425458835476308,svm
+linear,['t_x1' 't_x2' 't_x3' 't_x7'],0.695988829652196,svm
+linear,['t_x1' 't_x2' 't_x3' 't_x8'],0.6960186968923137,svm
+linear,['t_x1' 't_x2' 't_x4' 't_x5'],0.6134357779669369,svm
+linear,['t_x1' 't_x2' 't_x4' 't_x6'],0.7230709496288995,svm
+linear,['t_x1' 't_x2' 't_x4' 't_x7'],0.6321700043307499,svm
+linear,['t_x1' 't_x2' 't_x4' 't_x8'],0.6026462374744262,svm
+linear,['t_x1' 't_x2' 't_x5' 't_x6'],0.6851246210593911,svm
+linear,['t_x1' 't_x2' 't_x5' 't_x7'],0.6647551632991354,svm
+linear,['t_x1' 't_x2' 't_x5' 't_x8'],0.6654570434419008,svm
+linear,['t_x1' 't_x2' 't_x6' 't_x7'],0.6194017591804429,svm
+linear,['t_x1' 't_x2' 't_x6' 't_x8'],0.6336932335767513,svm
+linear,['t_x1' 't_x2' 't_x7' 't_x8'],0.6818989591266819,svm
+linear,['t_x1' 't_x3' 't_x4' 't_x5'],0.7341740961426458,svm
+linear,['t_x1' 't_x3' 't_x4' 't_x6'],0.5969863954721264,svm
+linear,['t_x1' 't_x3' 't_x4' 't_x7'],0.7285142541403461,svm
+linear,['t_x1' 't_x3' 't_x4' 't_x8'],0.7303510894075833,svm
+linear,['t_x1' 't_x3' 't_x5' 't_x6'],0.7262219434613145,svm
+linear,['t_x1' 't_x3' 't_x5' 't_x7'],0.6259426847662142,svm
+linear,['t_x1' 't_x3' 't_x5' 't_x8'],0.7492122515418963,svm
+linear,['t_x1' 't_x3' 't_x6' 't_x7'],0.4880979048131057,svm
+linear,['t_x1' 't_x3' 't_x6' 't_x8'],0.4935785433746995,svm
+linear,['t_x1' 't_x3' 't_x7' 't_x8'],0.6466406821677643,svm
+linear,['t_x1' 't_x4' 't_x5' 't_x6'],0.6169825127309111,svm
+linear,['t_x1' 't_x4' 't_x5' 't_x7'],0.5955154338963308,svm
+linear,['t_x1' 't_x4' 't_x5' 't_x8'],0.6321177366605438,svm
+linear,['t_x1' 't_x4' 't_x6' 't_x7'],0.7462180607200993,svm
+linear,['t_x1' 't_x4' 't_x6' 't_x8'],0.7166644266236579,svm
+linear,['t_x1' 't_x4' 't_x7' 't_x8'],0.7301420187267595,svm
+linear,['t_x1' 't_x5' 't_x6' 't_x7'],0.6763660528948824,svm
+linear,['t_x1' 't_x5' 't_x6' 't_x8'],0.676201783074235,svm
+linear,['t_x1' 't_x5' 't_x7' 't_x8'],0.6483132476143542,svm
+linear,['t_x1' 't_x6' 't_x7' 't_x8'],0.5066454609261831,svm
+linear,['t_x2' 't_x3' 't_x4' 't_x5'],0.6388976001672565,svm
+linear,['t_x2' 't_x3' 't_x4' 't_x6'],0.6061780386183414,svm
+linear,['t_x2' 't_x3' 't_x4' 't_x7'],0.7162462852620104,svm
+linear,['t_x2' 't_x3' 't_x4' 't_x8'],0.6635082060242223,svm
+linear,['t_x2' 't_x3' 't_x5' 't_x6'],0.477256096650389,svm
+linear,['t_x2' 't_x3' 't_x5' 't_x7'],0.659155055777071,svm
+linear,['t_x2' 't_x3' 't_x5' 't_x8'],0.6313859892776609,svm
+linear,['t_x2' 't_x3' 't_x6' 't_x7'],0.5833968012185834,svm
+linear,['t_x2' 't_x3' 't_x6' 't_x8'],0.6383077221749325,svm
+linear,['t_x2' 't_x3' 't_x7' 't_x8'],0.5898705255140898,svm
+linear,['t_x2' 't_x4' 't_x5' 't_x6'],0.7528261875961353,svm
+linear,['t_x2' 't_x4' 't_x5' 't_x7'],0.7252064572973135,svm
+linear,['t_x2' 't_x4' 't_x5' 't_x8'],0.7286262562907875,svm
+linear,['t_x2' 't_x4' 't_x6' 't_x7'],0.6963323029135493,svm
+linear,['t_x2' 't_x4' 't_x6' 't_x8'],0.6081492764661082,svm
+linear,['t_x2' 't_x4' 't_x7' 't_x8'],0.5803503427265803,svm
+linear,['t_x2' 't_x5' 't_x6' 't_x7'],0.6602676104714544,svm
+linear,['t_x2' 't_x5' 't_x6' 't_x8'],0.5599659513462658,svm
+linear,['t_x2' 't_x5' 't_x7' 't_x8'],0.6325508116422501,svm
+linear,['t_x2' 't_x6' 't_x7' 't_x8'],0.6259800188163612,svm
+linear,['t_x3' 't_x4' 't_x5' 't_x6'],0.8000462942221825,svm
+linear,['t_x3' 't_x4' 't_x5' 't_x7'],0.7181279213894242,svm
+linear,['t_x3' 't_x4' 't_x5' 't_x8'],0.7130579573794483,svm
+linear,['t_x3' 't_x4' 't_x6' 't_x7'],0.6973253886474621,svm
+linear,['t_x3' 't_x4' 't_x6' 't_x8'],0.6195734958111195,svm
+linear,['t_x3' 't_x4' 't_x7' 't_x8'],0.6212311276376506,svm
+linear,['t_x3' 't_x5' 't_x6' 't_x7'],0.6220748771709751,svm
+linear,['t_x3' 't_x5' 't_x6' 't_x8'],0.6244866568104774,svm
+linear,['t_x3' 't_x5' 't_x7' 't_x8'],0.6214252646984155,svm
+linear,['t_x3' 't_x6' 't_x7' 't_x8'],0.647917506682795,svm
+linear,['t_x4' 't_x5' 't_x6' 't_x7'],0.7299926825261712,svm
+linear,['t_x4' 't_x5' 't_x6' 't_x8'],0.7270358257545212,svm
+linear,['t_x4' 't_x5' 't_x7' 't_x8'],0.7130430237593895,svm
+linear,['t_x4' 't_x6' 't_x7' 't_x8'],0.6426832728521721,svm
+linear,['t_x5' 't_x6' 't_x7' 't_x8'],0.5917745620715918,svm
+linear,['t_x1' 't_x2' 't_x3' 't_x4' 't_x5'],0.7376834968564729,svm
+linear,['t_x1' 't_x2' 't_x3' 't_x4' 't_x6'],0.7432686707584786,svm
+linear,['t_x1' 't_x2' 't_x3' 't_x4' 't_x7'],0.7105192419694458,svm
+linear,['t_x1' 't_x2' 't_x3' 't_x4' 't_x8'],0.7129907560891836,svm
+linear,['t_x1' 't_x2' 't_x3' 't_x5' 't_x6'],0.7348386422352643,svm
+linear,['t_x1' 't_x2' 't_x3' 't_x5' 't_x7'],0.6677717545510208,svm
+linear,['t_x1' 't_x2' 't_x3' 't_x5' 't_x8'],0.683325119842301,svm
+linear,['t_x1' 't_x2' 't_x3' 't_x6' 't_x7'],0.6712438212147006,svm
+linear,['t_x1' 't_x2' 't_x3' 't_x6' 't_x8'],0.5910204142586204,svm
+linear,['t_x1' 't_x2' 't_x3' 't_x7' 't_x8'],0.6493287337783552,svm
+linear,['t_x1' 't_x2' 't_x4' 't_x5' 't_x6'],0.5262458372534087,svm
+linear,['t_x1' 't_x2' 't_x4' 't_x5' 't_x7'],0.6292579484192763,svm
+linear,['t_x1' 't_x2' 't_x4' 't_x5' 't_x8'],0.47414990367815063,svm
+linear,['t_x1' 't_x2' 't_x4' 't_x6' 't_x7'],0.7371234861042666,svm
+linear,['t_x1' 't_x2' 't_x4' 't_x6' 't_x8'],0.7303958902677598,svm
+linear,['t_x1' 't_x2' 't_x4' 't_x7' 't_x8'],0.6482385795140599,svm
+linear,['t_x1' 't_x2' 't_x5' 't_x6' 't_x7'],0.6846915460776848,svm
+linear,['t_x1' 't_x2' 't_x5' 't_x6' 't_x8'],0.6846840792676554,svm
+linear,['t_x1' 't_x2' 't_x5' 't_x7' 't_x8'],0.6566014067470095,svm
+linear,['t_x1' 't_x2' 't_x6' 't_x7' 't_x8'],0.6684064334035215,svm
+linear,['t_x1' 't_x3' 't_x4' 't_x5' 't_x6'],0.6786732971939728,svm
+linear,['t_x1' 't_x3' 't_x4' 't_x5' 't_x7'],0.7348535758553231,svm
+linear,['t_x1' 't_x3' 't_x4' 't_x5' 't_x8'],0.7369741499036783,svm
+linear,['t_x1' 't_x3' 't_x4' 't_x6' 't_x7'],0.7357570598688827,svm
+linear,['t_x1' 't_x3' 't_x4' 't_x6' 't_x8'],0.6616041694667204,svm
+linear,['t_x1' 't_x3' 't_x4' 't_x7' 't_x8'],0.6878201394800113,svm
+linear,['t_x1' 't_x3' 't_x5' 't_x6' 't_x7'],0.628645669996864,svm
+linear,['t_x1' 't_x3' 't_x5' 't_x6' 't_x8'],0.7149022594567148,svm
+linear,['t_x1' 't_x3' 't_x5' 't_x7' 't_x8'],0.6851768887295969,svm
+linear,['t_x1' 't_x3' 't_x6' 't_x7' 't_x8'],0.4572151785314278,svm
+linear,['t_x1' 't_x4' 't_x5' 't_x6' 't_x7'],0.720838373430103,svm
+linear,['t_x1' 't_x4' 't_x5' 't_x6' 't_x8'],0.7350103788659409,svm
+linear,['t_x1' 't_x4' 't_x5' 't_x7' 't_x8'],0.6349476576616938,svm
+linear,['t_x1' 't_x4' 't_x6' 't_x7' 't_x8'],0.7306348281887013,svm
+linear,['t_x1' 't_x5' 't_x6' 't_x7' 't_x8'],0.6898361781879544,svm
+linear,['t_x2' 't_x3' 't_x4' 't_x5' 't_x6'],0.7449188357749802,svm
+linear,['t_x2' 't_x3' 't_x4' 't_x5' 't_x7'],0.7238325642519002,svm
+linear,['t_x2' 't_x3' 't_x4' 't_x5' 't_x8'],0.7239296327822827,svm
+linear,['t_x2' 't_x3' 't_x4' 't_x6' 't_x7'],0.6835192569030658,svm
+linear,['t_x2' 't_x3' 't_x4' 't_x6' 't_x8'],0.6071039230619895,svm
+linear,['t_x2' 't_x3' 't_x4' 't_x7' 't_x8'],0.5986216268685692,svm
+linear,['t_x2' 't_x3' 't_x5' 't_x6' 't_x7'],0.6968176455654614,svm
+linear,['t_x2' 't_x3' 't_x5' 't_x6' 't_x8'],0.6398160178008752,svm
+linear,['t_x2' 't_x3' 't_x5' 't_x7' 't_x8'],0.6304003703537774,svm
+linear,['t_x2' 't_x3' 't_x6' 't_x7' 't_x8'],0.6591326553469826,svm
+linear,['t_x2' 't_x4' 't_x5' 't_x6' 't_x7'],0.7281110463987576,svm
+linear,['t_x2' 't_x4' 't_x5' 't_x6' 't_x8'],0.7373325567850904,svm
+linear,['t_x2' 't_x4' 't_x5' 't_x7' 't_x8'],0.72872332482117,svm
+linear,['t_x2' 't_x4' 't_x6' 't_x7' 't_x8'],0.6397786837507281,svm
+linear,['t_x2' 't_x5' 't_x6' 't_x7' 't_x8'],0.6687424398548453,svm
+linear,['t_x3' 't_x4' 't_x5' 't_x6' 't_x7'],0.7299105476158476,svm
+linear,['t_x3' 't_x4' 't_x5' 't_x6' 't_x8'],0.7284993205202873,svm
+linear,['t_x3' 't_x4' 't_x5' 't_x7' 't_x8'],0.7339575586517929,svm
+linear,['t_x3' 't_x4' 't_x6' 't_x7' 't_x8'],0.6579006316921284,svm
+linear,['t_x3' 't_x5' 't_x6' 't_x7' 't_x8'],0.6125173603333184,svm
+linear,['t_x4' 't_x5' 't_x6' 't_x7' 't_x8'],0.7847916013320789,svm
+linear,['t_x1' 't_x2' 't_x3' 't_x4' 't_x5' 't_x6'],0.7381315054582381,svm
+linear,['t_x1' 't_x2' 't_x3' 't_x4' 't_x5' 't_x7'],0.5821797111837881,svm
+linear,['t_x1' 't_x2' 't_x3' 't_x4' 't_x5' 't_x8'],0.6315950599584846,svm
+linear,['t_x1' 't_x2' 't_x3' 't_x4' 't_x6' 't_x7'],0.7081671968101788,svm
+linear,['t_x1' 't_x2' 't_x3' 't_x4' 't_x6' 't_x8'],0.7293057360034646,svm
+linear,['t_x1' 't_x2' 't_x3' 't_x4' 't_x7' 't_x8'],0.7130952914295955,svm
+linear,['t_x1' 't_x2' 't_x3' 't_x5' 't_x6' 't_x7'],0.6846915460776848,svm
+linear,['t_x1' 't_x2' 't_x3' 't_x5' 't_x6' 't_x8'],0.6863267774741275,svm
+linear,['t_x1' 't_x2' 't_x3' 't_x5' 't_x7' 't_x8'],0.6566014067470095,svm
+linear,['t_x1' 't_x2' 't_x3' 't_x6' 't_x7' 't_x8'],0.6194017591804429,svm
+linear,['t_x1' 't_x2' 't_x4' 't_x5' 't_x6' 't_x7'],0.4252572316055135,svm
+linear,['t_x1' 't_x2' 't_x4' 't_x5' 't_x6' 't_x8'],0.7393859295431806,svm
+linear,['t_x1' 't_x2' 't_x4' 't_x5' 't_x7' 't_x8'],0.5680450397980974,svm
+linear,['t_x1' 't_x2' 't_x4' 't_x6' 't_x7' 't_x8'],0.5665292773621254,svm
+linear,['t_x1' 't_x2' 't_x5' 't_x6' 't_x7' 't_x8'],0.6846840792676554,svm
+linear,['t_x1' 't_x3' 't_x4' 't_x5' 't_x6' 't_x7'],0.5524991413168466,svm
+linear,['t_x1' 't_x3' 't_x4' 't_x5' 't_x6' 't_x8'],0.7803563161746038,svm
+linear,['t_x1' 't_x3' 't_x4' 't_x5' 't_x7' 't_x8'],0.737414691695414,svm
+linear,['t_x1' 't_x3' 't_x4' 't_x6' 't_x7' 't_x8'],0.6407120350044054,svm
+linear,['t_x1' 't_x3' 't_x5' 't_x6' 't_x7' 't_x8'],0.7149022594567148,svm
+linear,['t_x1' 't_x4' 't_x5' 't_x6' 't_x7' 't_x8'],0.7374818929856787,svm
+linear,['t_x2' 't_x3' 't_x4' 't_x5' 't_x6' 't_x7'],0.740177411406299,svm
+linear,['t_x2' 't_x3' 't_x4' 't_x5' 't_x6' 't_x8'],0.7538118065200186,svm
+linear,['t_x2' 't_x3' 't_x4' 't_x5' 't_x7' 't_x8'],0.7239221659722533,svm
+linear,['t_x2' 't_x3' 't_x4' 't_x6' 't_x7' 't_x8'],0.6946896047070771,svm
+linear,['t_x2' 't_x3' 't_x5' 't_x6' 't_x7' 't_x8'],0.6727670504607022,svm
+linear,['t_x2' 't_x4' 't_x5' 't_x6' 't_x7' 't_x8'],0.7157161417499216,svm
+linear,['t_x3' 't_x4' 't_x5' 't_x6' 't_x7' 't_x8'],0.7278273076176397,svm
+linear,['t_x1' 't_x2' 't_x3' 't_x4' 't_x5' 't_x6' 't_x7'],0.7381165718381792,svm
+linear,['t_x1' 't_x2' 't_x3' 't_x4' 't_x5' 't_x6' 't_x8'],0.715133730567627,svm
+linear,['t_x1' 't_x2' 't_x3' 't_x4' 't_x5' 't_x7' 't_x8'],0.7378925675372967,svm
+linear,['t_x1' 't_x2' 't_x3' 't_x4' 't_x6' 't_x7' 't_x8'],0.731381509191643,svm
+linear,['t_x1' 't_x2' 't_x3' 't_x5' 't_x6' 't_x7' 't_x8'],0.6863267774741275,svm
+linear,['t_x1' 't_x2' 't_x4' 't_x5' 't_x6' 't_x7' 't_x8'],0.7139913086331258,svm
+linear,['t_x1' 't_x3' 't_x4' 't_x5' 't_x6' 't_x7' 't_x8'],0.7589415050102296,svm
+linear,['t_x2' 't_x3' 't_x4' 't_x5' 't_x6' 't_x7' 't_x8'],0.7230336155787525,svm
+linear,['t_x1' 't_x2' 't_x3' 't_x4' 't_x5' 't_x6' 't_x7' 't_x8'],0.7389976554216507,svm
