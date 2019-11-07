@@ -33,9 +33,11 @@ Vector Machine (SVM) as candidate algorithms for classification. We
 create an automatic process to select best algorithm/classifier and
 feature set by running 3-fold cross validations over any subsets of the
 candidate features and the 12 pre-constructed classifiers (as shown in
-params.py), where the metric is highest classification accuracy. The
-cross validation process suggests that one LR classifier is able to
-achieve a classification accuracy of 91\%, with the feature set
+params.py), where the metric is highest classification accuracy. Since
+the code is implemented in a multi-processing manner, this brute-forced
+process does not take too much time (~1 min). The cross validation
+process suggests that one LR classifier is able to achieve a
+classification accuracy of 91\%, with the feature set
 [x1, x2, x3, x4, x5, x6, x7]. We then train a classifier using the best
 setting and apply it to predict any other domains (as 'legit' or 'dga').
 
