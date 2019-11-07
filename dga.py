@@ -181,6 +181,14 @@ def supervised_predict(x, clf, le):
 
 def pipeline_supervised_train(csv_filename="data/dga_domains.csv", best_filename="data/best.pickle",
                               clf_filename="data/clf.pickle"):
+    # Load best setting.
+    try:
+        with open(best_filename, 'rb') as f:
+            best = load(f)
+    except FileNotFoundError:
+        print("{name} does not exist. Try action 'a'.".format(name=best_filename))
+        return None
+
     # Ingest raw data.
     raw_df = ingest(csv_params, csv_filename)
 
@@ -189,10 +197,6 @@ def pipeline_supervised_train(csv_filename="data/dga_domains.csv", best_filename
 
     # Transform raw data.
     transform_df, target_le = transform(raw_df)
-
-    # Load best setting.
-    with open(best_filename, 'rb') as f:
-        best = load(f)
 
     print("--------------------------------- Best setting ---------------------------------")
     print("""
@@ -221,21 +225,26 @@ def pipeline_supervised_train(csv_filename="data/dga_domains.csv", best_filename
 
 
 def pipeline_supervised_predict(best_filename="data/best.pickle", clf_filename="data/clf.pickle"):
+    # Load best setting.
+    try:
+        with open(best_filename, 'rb') as f:
+            best = load(f)
+    except FileNotFoundError:
+        print("{name} does not exist. Try action 'a'.".format(name=best_filename))
+        return None
 
-    transform_functions = {'t_x1': transform_domain_len_udf,
-                           't_x2': transform_domain_num_len_udf,
-                           't_x3': transform_domain_sym_len_udf,
-                           't_x4': transform_domain_vow_len_udf,
-                           't_x5': transform_domain_uniq_count_udf,
-                           't_x6': transform_domain_norm_ent_udf,
-                           't_x7': transform_domain_gini_idx_udf,
-                           't_x8': transform_domain_class_err_udf,}
+    # Load classifier.
+    try:
+        with open(clf_filename, 'rb') as f:
+            clf, target_le = load(f)
+    except FileNotFoundError:
+        print("{name} does not exist. Try action 'c'.".format(name=clf_filename))
+        return None
 
-    with open(best_filename, 'rb') as f:
-        best = load(f)
-
-    with open(clf_filename, 'rb') as f:
-        clf, target_le = load(f)
+    transform_functions = {'t_x1': transform_domain_len_udf, 't_x2': transform_domain_num_len_udf,
+                           't_x3': transform_domain_sym_len_udf, 't_x4': transform_domain_vow_len_udf,
+                           't_x5': transform_domain_uniq_count_udf, 't_x6': transform_domain_norm_ent_udf,
+                           't_x7': transform_domain_gini_idx_udf, 't_x8': transform_domain_class_err_udf, }
 
     while True:
         domain = input("Give a domain to be predicted? \n")
@@ -304,12 +313,15 @@ def pipeline_unsupervised_train(csv_filename="data/dga_domains.csv", markov_file
 
 
 def unsupervised_predict(domain, markov_model, th):
-    seq_pr = markov_apply(list(domain), markov_model, is_log=True)
+    if domain:
+        seq_pr = markov_apply(list(domain), markov_model, is_log=True)
 
-    if seq_pr < th:
-        label = 'dga'
+        if seq_pr < th:
+            label = 'dga'
+        else:
+            label = 'legit'
     else:
-        label = 'legit'
+        label = "Try again."
 
     return label
 
@@ -329,9 +341,9 @@ def main():
     --------------------------------- DGA detector ---------------------------------
     Choose an action to take 
     'a': automatically select classifier and feature set by cross-validation.
-    'c': train a classifier. 
+    'c': train a classifier (supervised). 
     's': predict a domain with the classifier. 
-    'm': train a Markov model.
+    'm': train a Markov model (unsupervised).
     'u': predict a domain with the Markov model. 
     'e': exit. 
     --------------------------------------------------------------------------------    
