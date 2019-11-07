@@ -247,7 +247,10 @@ def pipeline_supervised_predict(best_filename="data/best.pickle", clf_filename="
                            't_x7': transform_domain_gini_idx_udf, 't_x8': transform_domain_class_err_udf, }
 
     while True:
-        domain = input("Give a domain to be predicted? \n")
+        domain = input("Give a domain to be predicted? (Type '!' to exit) \n")
+        if domain == '!':
+            return None
+
         if domain:
             x = [transform_functions[column](domain) for column in best['columns']]
             label = supervised_predict(x, clf, target_le)
@@ -299,7 +302,7 @@ def pipeline_unsupervised_train(csv_filename="data/dga_domains.csv", markov_file
         # threshold anyway.
         if k == 10 and th90 == 0:
             th90 = th
-        print("Test the threshold {th}: theoretical ACC={acc}, FPR={fpr}%".format(th=th, acc=acc, fpr=k / 2))
+        print("Test the threshold {th}: theoretical ACC={acc}%, FPR={fpr}%".format(th=th, acc=acc * 100, fpr=k / 2))
 
     print("The selected threshold is {th}".format(th=th90))
 
@@ -326,14 +329,22 @@ def unsupervised_predict(domain, markov_model, th):
     return label
 
 
-def pipeline_unsupervised_predict():
-    with open("data/markov.pickle", 'rb') as f:
-        markov_model, th = load(f)
+def pipeline_unsupervised_predict(markov_filename="data/markov.pickle"):
+    # Load Markov model.
+    try:
+        with open(markov_filename, 'rb') as f:
+            markov_model, th = load(f)
+    except FileNotFoundError:
+        print("{name} does not exist. Try action 'm'.".format(name=markov_filename))
+        return None
 
     while True:
-        domain = input("Give a domain to be predicted? \n")
-        label = unsupervised_predict(domain, markov_model, th)
-        print(label)
+        domain = input("Give a domain to be predicted? (Type '!' to exit) \n")
+        if domain == '!':
+            return None
+        else:
+            label = unsupervised_predict(domain, markov_model, th)
+            print(label)
 
 
 def main():
@@ -359,11 +370,13 @@ def main():
         main()
     elif action_code == 's':
         pipeline_supervised_predict()
+        main()
     elif action_code == 'm':
         pipeline_unsupervised_train()
         main()
     elif action_code == 'u':
         pipeline_unsupervised_predict()
+        main()
     else:
         print("Choose 'a', 'c', 's', 'm', 'u', or 'e'.")
         main()
