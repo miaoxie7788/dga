@@ -61,6 +61,7 @@ class DGAPredictMCM(PandasAnalytics):
                       self.df[self.df[self.options['y_column']] == 'legit'][self.options['X_columns']].values))
         y = self.df[self.options['y_column']]
 
+        # Learn the threshold.
         ps = [mcm_apply(x0, markov, is_log=True) for x0 in X0]
         th = percentile(ps, 1)
 
@@ -86,8 +87,8 @@ if __name__ == "__main__":
         'y_column': 'class'
     }
 
-    wd = DGAPredictMCM(dga_log, mcm_options)
-    wd.main()
+    dga_predict_mcm = DGAPredictMCM(dga_log, mcm_options)
+    dga_predict_mcm.main()
 
     end = datetime.now() - start
     print("time consumption: {t} seconds".format(t=end))
