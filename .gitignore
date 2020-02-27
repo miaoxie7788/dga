@@ -103,13 +103,16 @@ venv.bak/
 # mypy
 .mypy_cache/
 
-# Data
-#/data
-
 # Mac OS
 .DS_Store
 
 # PyCharm
 .idea
 
+# Data
+/data
+
+/tests
+
+/old
 
